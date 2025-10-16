@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Caos a Claridad en 10 Min | Mini Mapa Ágil de Negocio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9f5f9 100%);
+            color: #2c3e50;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .logo-section {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0078FF, #00a8ff);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 20px rgba(0, 120, 255, 0.3);
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #0078FF;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #0078FF, #34C759, #0078FF);
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .main-title {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            color: #0078FF;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border-left: 5px solid #ff6b6b;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .problem-section h2 {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            color: #d63031;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .problem-section p {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .problem-section .bold-statement {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-top: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            margin-bottom: 40px;
+        }
+
+        .solution-section p {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Content Box */
+        .content-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 5px solid #0078FF;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .content-box h2 {
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            color: #0078FF;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 120, 255, 0.1);
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            min-width: 30px;
+            flex-shrink: 0;
+        }
+
+        .benefit-text {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        /* Ideal For Section */
+        .ideal-section {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%);
+            border-left: 5px solid #ffd700;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .ideal-section h2 {
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            color: #d68910;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .ideal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .ideal-icon {
+            color: #d68910;
+            font-size: 1.3rem;
+            min-width: 25px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Results Section */
+        .results-section {
+            background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%);
+            border-left: 5px solid #34C759;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+        }
+
+        .results-section h2 {
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            color: #16a34a;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(52, 199, 89, 0.05), transparent 70%),
+                radial-gradient(circle at 70% 50%, rgba(0, 120, 255, 0.05), transparent 70%);
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.15rem;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #34C759, #28a745);
+            color: white;
+            border: none;
+            padding: 22px 50px;
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(52, 199, 89, 0.4);
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '🟢';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(52, 199, 89, 0.5);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px) scale(1.03);
+        }
+
+        .cta-note {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        /* Final Message */
+        .final-message {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 35px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .final-message p {
+            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .final-message .signature {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-top: 25px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero,
+        .problem-section,
+        .solution-section,
+        .content-box,
+        .ideal-section,
+        .results-section,
+        .cta-section,
+        .final-message {
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .problem-section {
+            animation-delay: 0.1s;
+        }
+
+        .solution-section {
+            animation-delay: 0.2s;
+        }
+
+        .content-box {
+            animation-delay: 0.3s;
+        }
+
+        .ideal-section {
+            animation-delay: 0.4s;
+        }
+
+        .results-section {
+            animation-delay: 0.5s;
+        }
+
+        .cta-section {
+            animation-delay: 0.6s;
+        }
+
+        .final-message {
+            animation-delay: 0.7s;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .hero,
+            .problem-section,
+            .solution-section,
+            .content-box,
+            .ideal-section,
+            .results-section,
+            .cta-section,
+            .final-message {
+                padding: 25px 20px;
+            }
+
+            .cta-button {
+                padding: 18px 35px;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .benefit-item,
+            .ideal-item {
+                font-size: 1rem;
+            }
+        }
+
+        /* Pulse animation for CTA */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        .cta-button {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .cta-button:hover {
+            animation: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <div class="logo">M</div>
+                <div>
+                    <div class="tagline">Estructura y Crece tu Negocio</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1 class="main-title">🔥 De Caos a Claridad en 10 Min:<br>Tu Negocio en 1 Hoja</h1>
+            <p class="hero-subtitle">Diagnostica tu negocio, detecta 3 acciones clave hoy y da el primer paso hacia tu
+                crecimiento estructurado.</p>
+        </section>
+
+        <section class="problem-section">
+            <h2>¿Tienes un negocio que vende, pero sientes que no crece como debería?</h2>
+            <p>¿Te pasa que trabajas sin parar, pero los resultados no reflejan tu esfuerzo?</p>
+            <div class="bold-statement">
+                No es falta de ganas.<br>Es falta de <strong>estructura</strong>.
+            </div>
+        </section>
+
+        <section class="solution-section">
+            <p>Con este mini workbook gratuito, podrás descubrir en menos de 10 minutos dónde están las fugas de tu
+                negocio y qué necesitas ajustar para crecer con dirección.</p>
+        </section>
+
+        <section class="content-box">
+            <h2>💡 ¿Qué encontrarás dentro?</h2>
+
+            <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <span class="benefit-text">Una plantilla visual del Mapa Ágil de Negocio (versión simplificada)</span>
+            </div>
+
+            <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <span class="benefit-text">5 preguntas estratégicas para diagnosticar tu situación actual</span>
+            </div>
+
+            <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <span class="benefit-text">Un mini test que te revela tus 3 acciones prioritarias</span>
+            </div>
+
+            <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <span class="benefit-text">Una guía clara para ordenar tu propuesta, tus clientes y tus ingresos</span>
+            </div>
+        </section>
+
+        <section class="ideal-section">
+            <h2>🎯 Ideal para ti si...</h2>
+
+            <div class="ideal-item">
+                <span class="ideal-icon">▸</span>
+                <span>Ya tienes un negocio o servicio pero sientes que estás estancado.</span>
+            </div>
+
+            <div class="ideal-item">
+                <span class="ideal-icon">▸</span>
+                <span>Vendes, pero no sabes por qué no creces.</span>
+            </div>
+
+            <div class="ideal-item">
+                <span class="ideal-icon">▸</span>
+                <span>Quieres claridad sobre qué cambiar o mejorar sin perder tiempo.</span>
+            </div>
+
+            <div class="ideal-item">
+                <span class="ideal-icon">▸</span>
+                <span>Estás listo para estructurar tu negocio con método y acompañamiento.</span>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <h2>🚀 ¿Qué lograrás al completarlo?</h2>
+
+            <div class="benefit-item">
+                <span class="benefit-icon">✔️</span>
+                <span class="benefit-text">Ver tu negocio en una sola hoja, con claridad.</span>
+            </div>
+
+            <div class="benefit-item">
+                <span class="benefit-icon">✔️</span>
+                <span class="benefit-text">Identificar tus tres acciones clave para escalar.</span>
+            </div>
+
+            <div class="benefit-item">
+                <span class="benefit-icon">✔️</span>
+                <span class="benefit-text">Entender cómo el método Mapa Ágil de Negocio puede llevarte a resultados
+                    medibles.</span>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>✍️ Descarga ahora tu guía gratuita</h2>
+                <p>Obtén el Mini Mapa Ágil de Negocio y da el primer paso hacia un negocio claro, rentable y en
+                    crecimiento.</p>
+
+                <button class="cta-button"
+                    onclick="alert('¡Excelente decisión! Aquí se integraría tu formulario de captura de email/WhatsApp.')">
+                    QUIERO MI MINI MAPA ÁGIL
+                </button>
+
+                <p class="cta-note">📩 Recíbelo en tu correo o WhatsApp y comienza hoy mismo</p>
+            </div>
+        </section>
+
+        <section class="final-message">
+            <p>"No necesitas más ideas.</p>
+            <p>Necesitas claridad, estructura y un plan que funcione.</p>
+            <p>Empieza con esta hoja. En solo 10 minutos verás tu negocio con otros ojos."</p>
+            <p class="signature">— Tu guía hacia la claridad empresarial</p>
+        </section>
+
+        <footer>
+            <p>© 2025 Mapa Ágil de Negocio | Transformando el caos en claridad, un emprendedor a la vez</p>
+        </footer>
+    </div>
+</body>
+
+</html>
