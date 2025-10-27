@@ -85,7 +85,7 @@
             </p>
 
             <form id="registerForm" class="mt-6 space-y-4" novalidate>
-                <input type="hidden" name="fromEvent" value="landing-page" />
+                <input type="hidden" name="fromEvent" value="taller-andrea-capote" />
 
                 <div>
                     <label class="block text-sm text-slate-600" for="name">Nombre completo</label>
@@ -126,9 +126,9 @@
 
             <!-- Manual download fallback -->
             <div class="mt-4">
-                <a id="pdfLink" href="/assets/mapaagil.pdf" download
-                    class="inline-flex items-center justify-center rounded-2xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50">
-                    Descargar "mapaagil.pdf"
+                <a id="pdfLink" href="assets/mapaagil.pdf" download=""
+                    class=" w-full inline-flex items-center justify-center rounded-2xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50 hidden">
+                    Descargar mi Mapa Ágil
                 </a>
             </div>
         </section>
@@ -206,9 +206,13 @@
 
                 ok.classList.remove('hidden');
                 // Auto-start PDF download after success
-                setTimeout(() => pdfLink.click(), 350);
+                setTimeout(() => {
+                    submitBtn.classList.add('hidden');
+                    pdfLink.classList.remove('hidden');
+                    pdfLink.click();
+                }, 350);
                 form.reset();
-                form.fromEvent.value = 'landing-page';
+                form.fromEvent.value = 'taller-andrea-capote';
             } catch (e) {
                 err.textContent = 'No pudimos enviar tu registro. Intenta nuevamente.';
                 err.classList.remove('hidden');
