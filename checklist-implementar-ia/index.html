@@ -12,9 +12,15 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
     <style>
+        :root {
+            --color-primary-dark: #1f4953;
+            --color-primary-gold: #CCAC62;
+            --color-background-light: #F8F7F2;
+        }
+
         /* Smooth focus styles for accessibility */
         :focus-visible {
-            outline: 3px solid #f59e0b;
+            outline: 3px solid var(--color-primary-dark);
             outline-offset: 2px;
         }
 
@@ -26,19 +32,19 @@
     </style>
 </head>
 
-<body class="min-h-screen bg-[#FAFAFA] text-slate-800">
+<body class="min-h-screen bg-[#F8F7F2] text-[#1F4953]">
     <!-- Header -->
     <header
-        class="w-full border-b border-slate-200/70 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/50">
+        class="w-full border-b border-[#1F4953]/20 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/50">
         <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full bg-amber-500/90 shadow" aria-hidden="true"></div>
-                <span class="font-semibold tracking-wide">AGA Social</span>
+                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-[#1F4953] to-[#CCAC62] shadow" aria-hidden="true"></div>
+                <span class="font-semibold tracking-wide text-[#1F4953]">AGA Social</span>
             </div>
             <div class="flex items-center gap-3">
 
                 <a href="https://wa.me/16574145114?text=Hola!%20Quiero%20saber%20más%20sobre%20el%20Checklist%20para%20Implementar%20IA%20"
-                    class="inline-flex items-center text-slate-600 hover:text-slate-900" target="_blank">
+                    class="inline-flex items-center text-[#1F4953] hover:text-[#1F4953]/80" target="_blank">
                     <span class="material-symbols-outlined" aria-hidden="true">call</span>&nbsp;(657) 414-5114</a>
             </div>
         </div>
@@ -48,33 +54,34 @@
     <main class="max-w-5xl mx-auto px-4 pt-10 pb-4 grid md:grid-cols-2 gap-8 items-start">
         <!-- Left: Copy -->
         <section>
-            <p class="uppercase tracking-[0.2em] text-slate-600 text-sm">Checklist</p><!-- presencial o virtual -->
+            <p class="uppercase tracking-[0.2em] text-[#1F4953]/70 text-sm">Checklist</p><!-- presencial o virtual -->
             <h1 class="mt-2 text-4xl md:text-5xl font-serif leading-tight">
-                <span class="text-amber-600 font-semibold">Implementa IA en tu negocio</span><br />
-                <span class="italic text-slate-600">con nuestro Checklist</span>
+                <span class="text-[#1F4953] font-semibold">Implementa IA en tu negocio</span><br />
+                <span class="italic text-[#CCAC62]">con nuestro Checklist</span>
             </h1>
-            <p class="mt-4 text-slate-700 max-w-prose">
+            <p class="mt-4 text-[#1F4953] max-w-prose">
                 Descubre cómo implementar IA en tu negocio con nuestro Checklist.
             </p>
 
-            <ul class="mt-6 space-y-2 text-slate-700">
-                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-amber-600"></span>Implementa IA en tu negocio</li>
-                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-amber-600"></span>Obtén resultados rápidos</li>
+            <ul class="mt-6 space-y-2 text-[#1F4953]">
+                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#CCAC62]"></span>Implementa IA en tu negocio</li>
+                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#CCAC62]"></span>Obtén resultados rápidos</li>
+                
             </ul>
 
-            <div class="mt-6 p-4 rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hidden">
+            <div class="mt-6 p-4 rounded-2xl bg-white shadow-sm ring-1 ring-[#1F4953]/20 hidden">
                 <div class="grid sm:grid-cols-3 gap-4 text-sm">
                     <div>
-                        <p class="text-slate-500">Fecha</p>
-                        <p class="font-medium">Lunes 27 de Octubre</p>
+                        <p class="text-[#1F4953]/70">Fecha</p>
+                        <p class="font-medium text-[#1F4953]">Lunes 27 de Octubre</p>
                     </div>
                     <div>
-                        <p class="text-slate-500">Horario</p>
-                        <p class="font-medium">6:30 p.m. — 8:00 p.m.</p>
+                        <p class="text-[#1F4953]/70">Horario</p>
+                        <p class="font-medium text-[#1F4953]">6:30 p.m. — 8:00 p.m.</p>
                     </div>
                     <div>
-                        <p class="text-slate-500">Lugar</p>
-                        <p class="font-medium">KOKAI Doral</p>
+                        <p class="text-[#1F4953]/70">Lugar</p>
+                        <p class="font-medium text-[#1F4953]">KOKAI Doral</p>
                     </div>
                 </div>
             </div>
@@ -82,54 +89,55 @@
             <!-- Optional flyer image (uncomment and set src) -->
             <!-- <div class="mt-8 hidden md:block">
         <img src="/assets/flyer-mapaagil.jpg" alt="Flyer Taller Mapa Ágil"
-             class="rounded-3xl shadow-lg ring-1 ring-slate-200" />
+             class="rounded-3xl shadow-lg ring-1 ring-[#1F4953]/20" />
       </div> -->
         </section>
 
         <!-- Right: Form card -->
-        <section class="bg-white rounded-3xl shadow-xl ring-1 ring-slate-200 p-6 md:p-8">
-            <h2 class="text-2xl font-semibold">Regístrate gratis</h2>
-            <p class="text-slate-600 text-sm mt-1">
+        <section class="bg-white rounded-3xl shadow-xl ring-1 ring-[#1F4953]/20 p-6 md:p-8">
+            <h2 class="text-2xl font-semibold text-[#1F4953]">Regístrate gratis</h2>
+            <p class="text-[#1F4953]/70 text-sm mt-1">
                 <!-- Reserva tu cupo y descarga tu guía <span class="italic">Mapa Ágil</span> en PDF. -->
-                Regístrate y descarga gratis nuestro Checklist para Implementar IA en PDF.
+                Regístrate y descarga nuestro Checklist para Implementar IA.
             </p>
 
             <form id="registerForm" class="mt-6 space-y-4" novalidate>
                 <input type="hidden" name="fromEvent" value="checklist-implementar-ia" />
 
                 <div>
-                    <label class="block text-sm text-slate-600" for="name">Nombre completo</label>
+                    <label class="block text-sm text-[#1F4953] font-medium" for="name">Nombre completo</label>
                     <input id="name" name="name" required placeholder="Tu nombre"
-                        class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500" />
+                        class="mt-1 w-full rounded-xl border border-[#1F4953]/30 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-[#1F4953] text-[#1F4953]" />
                     <p id="nameError" class="hidden text-xs text-red-600 mt-1">Ingresa tu nombre.</p>
                 </div>
 
                 <div>
-                    <label class="block text-sm text-slate-600" for="email">Email</label>
+                    <label class="block text-sm text-[#1F4953] font-medium" for="email">Email</label>
                     <input id="email" name="email" type="email" required placeholder="tu@email.com"
-                        class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500" />
+                        class="mt-1 w-full rounded-xl border border-[#1F4953]/30 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-[#1F4953] text-[#1F4953]" />
                     <p id="emailError" class="hidden text-xs text-red-600 mt-1">Ingresa un email válido.</p>
                 </div>
 
                 <div>
-                    <label class="block text-sm text-slate-600" for="phoneNumber">Teléfono</label>
+                    <label class="block text-sm text-[#1F4953] font-medium" for="phoneNumber">Teléfono</label>
                     <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="+1 786 000 0000"
-                        class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500" />
+                        class="mt-1 w-full rounded-xl border border-[#1F4953]/30 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-[#1F4953] text-[#1F4953]" />
                 </div>
 
                 <div>
-                    <label class="block text-sm text-slate-600" for="notes">Notas</label>
+                    <label class="block text-sm text-[#1F4953] font-medium" for="notes">Notas</label>
                     <textarea id="notes" name="notes" rows="3" placeholder="¿Algo que debamos saber? Empresa, Redes sociales, etc."
-                        class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        class="mt-1 w-full rounded-xl border border-[#1F4953]/30 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-[#1F4953] text-[#1F4953]"></textarea>
                 </div>
 
                 <button id="submitBtn" type="submit"
-                    class="w-full rounded-2xl bg-amber-600 text-white py-3 font-semibold shadow hover:bg-amber-700 transition disabled:opacity-60 disabled:cursor-not-allowed">
-                    Descargar PDF
+                    class="w-full rounded-2xl bg-[#1F4953] text-white py-3 font-semibold shadow hover:bg-[#1F4953]/90 transition disabled:opacity-60 disabled:cursor-not-allowed relative overflow-hidden group">
+                    <span class="relative z-10">Descargar PDF</span>
+                    <span class="absolute inset-0 bg-gradient-to-r from-[#CCAC62]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 </button>
 
                 <p id="errorMsg" class="hidden text-red-600 text-sm"></p>
-                <div id="successMsg" class="hidden rounded-xl bg-emerald-50 text-emerald-700 p-3 text-sm">
+                <div id="successMsg" class="hidden rounded-xl bg-[#CCAC62]/10 border border-[#CCAC62]/30 text-[#1F4953] p-3 text-sm">
                     ¡Registro enviado! Tu descarga iniciará en un momento. Si no comienza, usa el botón de abajo.
                 </div>
             </form>
@@ -137,7 +145,7 @@
             <!-- Manual download fallback -->
             <div class="mt-4">
                 <a id="pdfLink" href="/checklist-implementar-ia/assets/checklist-implementar-ia.pdf" download="checklist-implementar-ia.pdf"
-                    class=" w-full inline-flex items-center justify-center rounded-2xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50 hidden">
+                    class=" w-full inline-flex items-center justify-center rounded-2xl border border-[#1F4953]/30 px-4 py-2 text-sm text-[#1F4953] hover:bg-[#F8F7F2] hidden">
                     Descargar mi Checklist para Implementar IA
                 </a>
             </div>
@@ -145,14 +153,14 @@
     </main>
 
     <footer
-        class="max-w-5xl mx-auto px-4 pb-16 pt-6 text-sm text-slate-500 text-center md:flex md:justify-center md:items-center">
+        class="max-w-5xl mx-auto px-4 pb-16 pt-6 text-sm text-[#1F4953]/70 text-center md:flex md:justify-center md:items-center">
         <div class="grid md:grid-cols-2 gap-6 items-center">
             <div>
-                <p class="font-semibold text-amber-700">Presentado por</p>
-                <p class="font-medium text-slate-800">AGA Social</p>
+                <p class="font-semibold text-[#CCAC62]">Presentado por</p>
+                <p class="font-medium text-[#1F4953]">AGA Social</p>
                 <p>
                     <a href="https://wa.me/16574145114?text=Hola!%20Quiero%20saber%20más%20sobre%20el%20Checklist%20para%20Implementar%20IA%20"
-                        class="inline-flex items-center text-slate-600 hover:text-slate-900" target="_blank">
+                        class="inline-flex items-center text-[#1F4953] hover:text-[#1F4953]/80" target="_blank">
                         <span class="material-symbols-outlined" aria-hidden="true">call</span>&nbsp;(657) 414-5114</a>
                 </p>
 
