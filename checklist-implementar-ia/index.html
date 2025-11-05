@@ -4,16 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Taller Presencial – Mapa Ágil</title>
+    <title>Checklist para Implementar IA</title>
     <meta name="description"
-        content="Taller presencial: Estructura tu negocio a través de tu Mapa Ágil. Regístrate y descarga la guía en PDF." />
+        content="Checklist para Implementar IA. Regístrate y descarga la guía en PDF." />
     <link rel="icon" href="/assets/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
     <style>
         /* Smooth focus styles for accessibility */
         :focus-visible {
             outline: 3px solid #f59e0b;
             outline-offset: 2px;
+        }
+
+        .material-symbols-outlined {
+            font-size: 18px;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            line-height: 1;
         }
     </style>
 </head>
@@ -25,9 +33,14 @@
         <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="w-9 h-9 rounded-full bg-amber-500/90 shadow" aria-hidden="true"></div>
-                <span class="font-semibold tracking-wide">Andrea Copete — Health & Wellness</span>
+                <span class="font-semibold tracking-wide">AGA Social</span>
             </div>
-            <a href="tel:7869065744" class="text-sm text-slate-600 hover:text-slate-900">786-906-5744</a>
+            <div class="flex items-center gap-3">
+
+                <a href="https://wa.me/16574145114?text=Hola!%20Quiero%20saber%20más%20sobre%20el%20Checklist%20para%20Implementar%20IA%20"
+                    class="inline-flex items-center text-slate-600 hover:text-slate-900" target="_blank">
+                    <span class="material-symbols-outlined" aria-hidden="true">call</span>&nbsp;(657) 414-5114</a>
+            </div>
         </div>
     </header>
 
@@ -35,25 +48,21 @@
     <main class="max-w-5xl mx-auto px-4 pt-10 pb-4 grid md:grid-cols-2 gap-8 items-start">
         <!-- Left: Copy -->
         <section>
-            <p class="uppercase tracking-[0.2em] text-slate-600 text-sm">Taller presencial</p>
+            <p class="uppercase tracking-[0.2em] text-slate-600 text-sm">Checklist</p><!-- presencial o virtual -->
             <h1 class="mt-2 text-4xl md:text-5xl font-serif leading-tight">
-                <span class="text-amber-600 font-semibold">Estructura tu negocio</span><br />
-                <span class="italic text-slate-600">a través de tu Mapa Ágil</span>
+                <span class="text-amber-600 font-semibold">Implementa IA en tu negocio</span><br />
+                <span class="italic text-slate-600">con nuestro Checklist</span>
             </h1>
             <p class="mt-4 text-slate-700 max-w-prose">
-                Descubre cómo obtener claridad y trazar estrategias efectivas para potenciar tu negocio.
+                Descubre cómo implementar IA en tu negocio con nuestro Checklist.
             </p>
 
             <ul class="mt-6 space-y-2 text-slate-700">
-                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-amber-600"></span>Claridad en tus
-                    objetivos empresariales</li>
-                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-amber-600"></span>Estrategias prácticas
-                    para potenciar tu negocio</li>
-                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-amber-600"></span>Herramientas ágiles
-                    para una gestión efectiva</li>
+                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-amber-600"></span>Implementa IA en tu negocio</li>
+                <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-amber-600"></span>Obtén resultados rápidos</li>
             </ul>
 
-            <div class="mt-6 p-4 rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+            <div class="mt-6 p-4 rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hidden">
                 <div class="grid sm:grid-cols-3 gap-4 text-sm">
                     <div>
                         <p class="text-slate-500">Fecha</p>
@@ -79,13 +88,14 @@
 
         <!-- Right: Form card -->
         <section class="bg-white rounded-3xl shadow-xl ring-1 ring-slate-200 p-6 md:p-8">
-            <h2 class="text-2xl font-semibold">Regístrate</h2>
+            <h2 class="text-2xl font-semibold">Regístrate gratis</h2>
             <p class="text-slate-600 text-sm mt-1">
-                Reserva tu cupo y descarga tu guía <span class="italic">Mapa Ágil</span> en PDF.
+                <!-- Reserva tu cupo y descarga tu guía <span class="italic">Mapa Ágil</span> en PDF. -->
+                Regístrate y descarga gratis nuestro Checklist para Implementar IA en PDF.
             </p>
 
             <form id="registerForm" class="mt-6 space-y-4" novalidate>
-                <input type="hidden" name="fromEvent" value="taller-andrea-capote" />
+                <input type="hidden" name="fromEvent" value="checklist-implementar-ia" />
 
                 <div>
                     <label class="block text-sm text-slate-600" for="name">Nombre completo</label>
@@ -109,13 +119,13 @@
 
                 <div>
                     <label class="block text-sm text-slate-600" for="notes">Notas</label>
-                    <textarea id="notes" name="notes" rows="3" placeholder="¿Algo que debamos saber?"
+                    <textarea id="notes" name="notes" rows="3" placeholder="¿Algo que debamos saber? Empresa, Redes sociales, etc."
                         class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500"></textarea>
                 </div>
 
                 <button id="submitBtn" type="submit"
                     class="w-full rounded-2xl bg-amber-600 text-white py-3 font-semibold shadow hover:bg-amber-700 transition disabled:opacity-60 disabled:cursor-not-allowed">
-                    Reservar y descargar PDF
+                    Descargar PDF
                 </button>
 
                 <p id="errorMsg" class="hidden text-red-600 text-sm"></p>
@@ -126,21 +136,28 @@
 
             <!-- Manual download fallback -->
             <div class="mt-4">
-                <a id="pdfLink" href="/taller-andrea-capote/assets/mapaagil.pdf" download="MapaAgil.pdf"
+                <a id="pdfLink" href="/checklist-implementar-ia/assets/checklist-implementar-ia.pdf" download="checklist-implementar-ia.pdf"
                     class=" w-full inline-flex items-center justify-center rounded-2xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50 hidden">
-                    Descargar mi Mapa Ágil
+                    Descargar mi Checklist para Implementar IA
                 </a>
             </div>
         </section>
     </main>
 
-    <footer class="max-w-5xl mx-auto px-4 pb-16 pt-6 text-sm text-slate-500">
+    <footer
+        class="max-w-5xl mx-auto px-4 pb-16 pt-6 text-sm text-slate-500 text-center md:flex md:justify-center md:items-center">
         <div class="grid md:grid-cols-2 gap-6 items-center">
             <div>
-                <p class="font-semibold text-amber-700">Invitada especial</p>
-                <p class="font-medium text-slate-800">Daniella Hoffman — Coach de Emprendimiento</p>
+                <p class="font-semibold text-amber-700">Presentado por</p>
+                <p class="font-medium text-slate-800">AGA Social</p>
+                <p>
+                    <a href="https://wa.me/16574145114?text=Hola!%20Quiero%20saber%20más%20sobre%20el%20Checklist%20para%20Implementar%20IA%20"
+                        class="inline-flex items-center text-slate-600 hover:text-slate-900" target="_blank">
+                        <span class="material-symbols-outlined" aria-hidden="true">call</span>&nbsp;(657) 414-5114</a>
+                </p>
+
+                <p class="text-center">© <span id="year"></span> AGA Social</p>
             </div>
-            <p class="md:text-right">© <span id="year"></span> Women of Success</p>
         </div>
     </footer>
 
@@ -212,14 +229,14 @@
                     pdfLink.click();
                 }, 350);
                 form.reset();
-                form.fromEvent.value = 'taller-andrea-capote';
+                form.fromEvent.value = 'checklist-implementar-ia';
             } catch (e) {
                 err.textContent = 'No pudimos enviar tu registro. Intenta nuevamente.';
                 err.classList.remove('hidden');
                 console.error(e);
             } finally {
                 btn.disabled = false;
-                btn.textContent = 'Reservar y descargar PDF';
+                btn.textContent = 'Descargar Checklist para Implementar IA';
             }
         });
     </script>
