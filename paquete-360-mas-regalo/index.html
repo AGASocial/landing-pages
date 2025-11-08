@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AGA Social — Vende más esta Navidad
+        con Landing Pages e IA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@300;400;600;700;900"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        xmas: {
+                            red: '#C62828',
+                            redDark: '#8E0000',
+                            gold: '#F2C94C',
+                            green: '#2E7D32',
+                            pine: '#1B5E20',
+                            cream: '#FFF8F0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                        display: ['Poppins', 'Inter', 'ui-sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 10px 30px rgba(198,40,40,.25)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        .material-symbols-rounded {
+            font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+        }
+
+
+        .inset-shadow {
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4);
+        }
+
+
+        .glass {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, .7);
+        }
+
+
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+
+        .animate-appear {
+            opacity: 0;
+            transform: scale(.98);
+            transition: opacity .4s ease, transform .4s ease;
+        }
+
+
+        .in-view {
+            opacity: 1 !important;
+            transform: translateY(0) scale(1) !important;
+        }
+
+
+        .focus-ring:focus-visible {
+            outline: 3px solid #F2C94C;
+            outline-offset: 3px;
+            border-radius: .5rem;
+        }
+
+
+        .pulse {
+
+            animation: pulse 1.8s infinite;
+
+
+        }
+
+
+        @keyframes pulse {
+
+            0% {
+                box-shadow: 0 0 0 0 rgba(46, 125, 50, .5)
+            }
+
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(46, 125, 50, 0)
+            }
+
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(46, 125, 50, 0)
+            }
+
+
+
+        }
+    </style>
+
+</head>
+
+
+<body class="font-sans antialiased text-slate-800 bg-white selection:bg-xmas-gold/40 selection:text-xmas-red">
+
+    <header class="relative">
+        <div class="w-full bg-gradient-to-r from-xmas-red to-xmas-redDark text-white">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 text-center text-sm flex items-center justify-center
+                gap-2">
+                <span class="material-symbols-rounded text-gold-400" aria-hidden="true">celebration</span>
+                <p class="font-medium">🎄 Oferta válida por tiempo
+                    limitado</p>
+            </div>
+        </div>
+        <nav class="sticky top-0 z-40 bg-white/80 glass border-b
+            border-slate-200/70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center
+                justify-between">
+                <a href="#" class="flex items-center gap-3">
+                    <span class="inline-flex
+                        items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-xmas-red to-xmas-redDark
+                        text-white shadow-glow">
+                        <span class="material-symbols-rounded">sparkles</span>
+                    </span>
+
+                    <span class="font-display text-xl font-extrabold tracking-tight text-xmas-red">AGA Social</span>
+
+                </a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#beneficios" class="text-sm
+                        hover:text-xmas-red focus-ring">Beneficios</a>
+                    <a href="#features" class="text-sm
+                        hover:text-xmas-red focus-ring">Características</a>
+                    <a href="#testimonios" class="text-sm
+                        hover:text-xmas-red focus-ring">Resultados</a>
+                    <a href="#precios" class="text-sm
+                        hover:text-xmas-red focus-ring">Ofertas</a>
+                    <a href="#faq" class="text-sm
+                        hover:text-xmas-red focus-ring">FAQ</a>
+                    <a id="navWhatsapp" href="#" class="inline-flex
+                        items-center gap-2 bg-xmas-green text-white px-4 py-2 rounded-lg hover:bg-pine transition
+                        focus-ring">
+                        <span class="material-symbols-rounded">chat</span> WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0
+            pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-20 -right-28 w-72 h-72
+                bg-xmas-gold/30 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-16 w-80 h-80
+                bg-xmas-red/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6
+            py-16 sm:py-24 grid md:grid-cols-2 gap-10 items-center">
+            <div class="animate-fade-up">
+                <span class="inline-flex items-center gap-2 text-xmas-green text-sm font-semibold bg-xmas-green/10 px-3
+                    py-1 rounded-full">
+                    <span class="material-symbols-rounded
+                        text-xmas-green">holiday_village</span>
+                    Navidad 2025: acelera tus ventas
+                </span>
+                <h1 class="mt-4 font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+
+                    Convierte más con Landing Pages y MiniChat impulsados por IA
+                </h1>
+                <p class="mt-5 text-lg
+                    text-slate-600">
+                    Diseñamos páginas que venden y automatizaciones que no duermen. Capta leads
+                    24/7, responde al instante y cierra más clientes sin complicaciones.
+                </p>
+                <div class="mt-8 flex
+                    flex-col sm:flex-row gap-4">
+                    <a href="#precios" class="inline-flex items-center justify-center
+                        gap-2 bg-gradient-to-r from-xmas-red to-xmas-redDark text-white px-6 py-3 rounded-xl
+                        hover:brightness-110 transition shadow-glow focus-ring">
+                        <span class="material-symbols-rounded">local_offer</span>
+                        Ver ofertas de hoy
+                    </a>
+                    <a id="heroWhatsapp" href="#" class="inline-flex items-center justify-center gap-2 border
+                        border-xmas-green/30 text-xmas-green px-6 py-3 rounded-xl hover:bg-xmas-green/10 transition
+                        focus-ring">
+                        <span class="material-symbols-rounded">chat_bubble</span>
+                        Hablar por
+                        WhatsApp
+                    </a>
+                </div>
+                <div class="mt-6 flex items-center gap-4 text-sm text-slate-600">
+
+                    <div class="inline-flex items-center gap-2"><span class="material-symbols-rounded
+                            text-xmas-gold">verified</span> Pago seguro</div>
+                    <div class="inline-flex items-center
+                        gap-2"><span class="material-symbols-rounded text-xmas-gold">workspace_premium</span>
+                        Satisfacción garantizada</div>
+                    <div class="inline-flex items-center gap-2"><span
+                            class="material-symbols-rounded text-xmas-gold">support_agent</span> Atención
+                        personalizada</div>
+                </div>
+            </div>
+            <div class="relative animate-appear">
+                <img src="https://images.unsplash.com/photo-1608496601330-c47e3c19e8ec?q=80&w=1200&auto=format&fit=crop"
+                    alt="Landing page moderna con elementos navideños" class="rounded-2xl shadow-2xl border
+                    border-white/60">
+                <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4
+                    border border-slate-200 w-72">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-rounded text-xmas-green">auto_mode</span>
+                        <div>
+                            <p class="font-semibold">IA trabajando</p>
+                            <p class="text-sm text-slate-500">
+                                Respuestas en segundos · 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="problema" class="bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="md:col-span-1">
+                    <h2 class="font-display
+                        text-3xl font-bold">¿Te suena esto?</h2>
+                    <p class="mt-2 text-slate-600">Dolores comunes que
+                        frenan tus ventas.</p>
+                </div>
+                <div class="md:col-span-2 grid sm:grid-cols-2 gap-6">
+                    <div class="p-6 bg-white rounded-2xl border border-slate-200 animate-fade-up">
+                        <div class="flex
+                            items-start gap-3">
+                            <span class="material-symbols-rounded
+                                text-xmas-red">report</span>
+                            <div>
+                                <h3 class="font-semibold">Tráfico que no
+                                    convierte</h3>
+                                <p class="text-slate-600 text-sm">Muchos clics, pocos leads.
+                                    Falta una propuesta y estructura que guíe a la acción.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl border border-slate-200 animate-fade-up">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-rounded
+                                text-xmas-red">schedule</span>
+                            <div>
+                                <h3 class="font-semibold">Tiempo limitado
+                                </h3>
+                                <p class="text-slate-600 text-sm">Responder manualmente a cada mensaje frena
+                                    el crecimiento y las ventas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6
+                        bg-white rounded-2xl border border-slate-200 animate-fade-up">
+                        <div class="flex items-start
+                            gap-3">
+                            <span class="material-symbols-rounded text-xmas-red">bolt</span>
+                            <div>
+                                <h3 class="font-semibold">Sin automatización</h3>
+                                <p class="text-slate-600
+                                    text-sm">Pierdes oportunidades fuera de horario o cuando tu equipo no está
+                                    disponible.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl
+                        border border-slate-200 animate-fade-up">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-rounded text-xmas-red">trending_down</span>
+                            <div>
+                                <h3 class="font-semibold">Ingresos impredecibles</h3>
+                                <p class="text-slate-600
+                                    text-sm">Sin embudos claros es difícil proyectar y escalar ventas.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold">La solución: un sistema que vende solo</h2>
+
+                <p class="mt-3 text-slate-600">Landing Page optimizada + MiniChat con IA que capta, califica y
+                    convierte en automático.</p>
+            </div>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl border border-slate-200 animate-fade-up">
+                    <span class="material-symbols-rounded text-xmas-green">rocket_launch</span>
+                    <h3 class="mt-2
+                        font-semibold">Implementación express</h3>
+                    <p class="text-slate-600 text-sm">Listo en días,
+                        no semanas. Enfoque en lo que mueve la aguja.</p>
+                </div>
+                <div class="p-6 rounded-2xl border
+                    border-slate-200 animate-fade-up">
+                    <span class="material-symbols-rounded
+                        text-xmas-green">payments</span>
+                    <h3 class="mt-2 font-semibold">Más ventas, menos esfuerzo
+                    </h3>
+                    <p class="text-slate-600 text-sm">Automatiza respuestas, agendamiento y seguimiento.</p>
+
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 animate-fade-up">
+                    <span class="material-symbols-rounded text-xmas-green">shield_with_heart</span>
+                    <h3 class="mt-2
+                        font-semibold">Confianza y seguridad</h3>
+                    <p class="text-slate-600 text-sm">Mensajería
+                        clara, confianza y pago seguro en cada paso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="features" class="bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+            <div class="text-center">
+                <h2 class="font-display text-3xl font-bold">Todo lo que necesitas para
+                    convertir</h2>
+                <p class="mt-2 text-slate-600">Tecnología, diseño y copywriting orientados a
+                    resultados.</p>
+            </div>
+            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-2xl border border-slate-200 animate-fade-up">
+                    <div class="flex
+                        items-center gap-3">
+                        <span class="material-symbols-rounded
+                            text-xmas-red">auto_awesome</span>
+                        <h3 class="font-semibold">IA aplicada a tu negocio
+                        </h3>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-600">Flujos inteligentes que responden,
+                        filtran y nutren leads automáticamente.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl
+                    border border-slate-200 animate-fade-up">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-rounded text-xmas-red">web</span>
+                        <h3 class="font-semibold">
+                            Landing de alto rendimiento</h3>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-600">
+                        Arquitectura persuasiva, tiempos ultra rápidos y diseño navideño elegante.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl border border-slate-200 animate-fade-up">
+                    <div class="flex
+                        items-center gap-3">
+                        <span class="material-symbols-rounded
+                            text-xmas-red">analytics</span>
+                        <h3 class="font-semibold">Medición y A/B testing</h3>
+
+                    </div>
+                    <p class="mt-1 text-sm text-slate-600">Aprende qué convierte mejor y optimiza en base a
+                        datos reales.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl border border-slate-200
+                    animate-fade-up">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-rounded text-xmas-red">hub</span>
+                        <h3 class="font-semibold">
+                            Integraciones clave</h3>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-600">CRM, WhatsApp,
+                        Instagram, calendarios y pasarelas de pago.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl
+                    border border-slate-200 animate-fade-up">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-rounded text-xmas-red">support_agent</span>
+                        <h3 class="font-semibold">Soporte dedicado</h3>
+                    </div>
+                    <p class="mt-1 text-sm
+                        text-slate-600">Acompañamiento real para despegar y escalar sin fricciones.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl border border-slate-200 animate-fade-up">
+                    <div class="flex
+                        items-center gap-3">
+                        <span class="material-symbols-rounded text-xmas-red">lock</span>
+                        <h3 class="font-semibold">Pago seguro</h3>
+                    </div>
+                    <p class="mt-1 text-sm
+                        text-slate-600">Cifrado y proveedores confiables para tu tranquilidad.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonios">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-display text-3xl font-bold">Empresas que ya
+                    están vendiendo más</h2>
+                <p class="mt-2 text-slate-600">Historias reales de crecimiento con
+                    automatización y páginas efectivas.</p>
+            </div>
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+
+                <div class="p-6 rounded-2xl border border-slate-200 bg-white animate-fade-up">
+                    <div class="flex
+                        items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1607748852270-170178bb77bf?q=80&w=300&auto=format&fit=crop"
+                            alt="Cliente satisfecho 1" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold">María G.</p>
+                            <p class="text-sm text-slate-500">Clínica
+                                estética</p>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex text-xmas-gold">
+                        <span class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span>
+                    </div>
+                    <p class="mt-3 text-slate-700">
+                        Duplicamos las reservas en 3 semanas. El MiniChat filtra curiosos y la landing convierte a
+                        clientes.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 bg-white
+                    animate-fade-up">
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=300&auto=format&fit=crop"
+                            alt="Cliente satisfecho 2" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold">Javier P.</p>
+                            <p class="text-sm text-slate-500">Agencia
+                                digital</p>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex text-xmas-gold">
+                        <span class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span>
+                    </div>
+                    <p class="mt-3 text-slate-700">
+                        El sistema trabaja mientras dormimos. Leads mejor calificados y ventas más predecibles.</p>
+
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200 bg-white animate-fade-up">
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=300&auto=format&fit=crop"
+                            alt="Cliente satisfecho 3" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold">Claudia R.</p>
+                            <p class="text-sm text-slate-500">Consultora
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex text-xmas-gold">
+                        <span class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span><span
+                            class="material-symbols-rounded">grade</span>
+                    </div>
+                    <p class="mt-3 text-slate-700">
+                        Pasamos de 1 a 5 ventas por semana. El soporte fue excelente.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="precios" class="bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+
+            <div class="text-center">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold">Ofertas especiales
+                    de temporada</h2>
+                <p class="mt-2 text-slate-600">Elige el recurso ideal para empezar hoy.</p>
+
+                <div class="mt-4 inline-flex items-center gap-2 bg-xmas-gold/20 text-xmas-red px-4 py-2 rounded-full
+                    text-sm font-semibold">
+                    <span class="material-symbols-rounded">redeem</span> 🎄 Oferta válida
+                    por tiempo limitado
+                </div>
+            </div>
+            <div id="pricingGrid" class="mt-10 grid md:grid-cols-2
+                gap-6"></div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="max-w-7xl mx-auto px-4
+            sm:px-6 py-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-display text-3xl
+                    font-bold">Preguntas frecuentes</h2>
+                <p class="mt-2 text-slate-600">Resolvemos tus dudas más
+                    comunes.</p>
+            </div>
+            <div class="mt-8 grid md:grid-cols-2 gap-6">
+                <details class="group p-6
+                    rounded-2xl border border-slate-200 bg-white">
+                    <summary class="flex items-center justify-between
+                        cursor-pointer">
+                        <span class="font-semibold">¿Cuánto tarda la implementación?</span>
+
+                        <span class="material-symbols-rounded transition group-open:rotate-180">expand_more</span>
+
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-600">El paquete 360° suele estar listo en 7 a 10
+                        días, dependiendo de revisiones y contenidos.</p>
+                </details>
+                <details class="group p-6
+                    rounded-2xl border border-slate-200 bg-white">
+                    <summary class="flex items-center justify-between
+                        cursor-pointer">
+                        <span class="font-semibold">¿Qué necesito para empezar?</span>
+                        <span class="material-symbols-rounded transition group-open:rotate-180">expand_more</span>
+
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-600">Tu logo, paleta de colores y 30 minutos para
+                        definir oferta y mensajes clave.</p>
+                </details>
+                <details class="group p-6 rounded-2xl
+                    border border-slate-200 bg-white">
+                    <summary class="flex items-center justify-between
+                        cursor-pointer">
+                        <span class="font-semibold">¿La garantía aplica a servicios?</span>
+
+                        <span class="material-symbols-rounded transition group-open:rotate-180">expand_more</span>
+
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-600">Sí. Si no cumplimos con el entregable
+                        acordado, reparamos sin costo o devolvemos tu pago.</p>
+                </details>
+                <details class="group
+                    p-6 rounded-2xl border border-slate-200 bg-white">
+                    <summary class="flex items-center
+                        justify-between cursor-pointer">
+                        <span class="font-semibold">¿Puedo pagar en
+                            cuotas?</span>
+                        <span class="material-symbols-rounded transition
+                            group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <p class="mt-3 text-sm
+                        text-slate-600">Ofrecemos opciones según país y pasarela. Consulta por WhatsApp para
+                        alternativas.</p>
+                </details>
+                <details class="group p-6 rounded-2xl border border-slate-200
+                    bg-white md:col-span-2">
+                    <summary class="flex items-center justify-between cursor-pointer">
+
+                        <span class="font-semibold">¿Dan soporte y optimización?</span>
+                        <span class="material-symbols-rounded transition group-open:rotate-180">expand_more</span>
+
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-600">Incluimos onboarding y ajustes iniciales.
+                        También planes de optimización continua opcionales.</p>
+                </details>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br
+            from-xmas-red/10 via-transparent to-xmas-gold/10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6
+            py-16 text-center">
+            <h2 class="font-display text-3xl sm:text-4xl font-bold">Listo para vender más esta
+                Navidad</h2>
+            <p class="mt-2 text-slate-600">Da el primer paso hoy: descarga el recurso gratuito o
+                adquiere el paquete 360°.</p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#precios" class="inline-flex items-center justify-center gap-2 bg-xmas-red text-white px-6
+                    py-3 rounded-xl hover:bg-xmas-redDark transition shadow-glow focus-ring">
+                    <span class="material-symbols-rounded">shopping_bag</span> Ver ofertas
+                </a>
+                <a id="ctaWhatsapp" href="#" class="inline-flex items-center justify-center gap-2 border
+                    border-xmas-green/30 text-xmas-green px-6 py-3 rounded-xl hover:bg-xmas-green/10 transition
+                    focus-ring">
+                    <span class="material-symbols-rounded">chat</span> Consultar por WhatsApp
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-slate-200">
+        <div class="max-w-7xl mx-auto
+            px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex
+                items-center gap-3">
+                <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg
+                    bg-xmas-red text-white">
+                    <span class="material-symbols-rounded">sparkles</span>
+                </span>
+                <p class="text-sm text-slate-600">© <span id="year"></span> AGA Social. Todos los derechos
+                    reservados.</p>
+            </div>
+            <div class="flex items-center gap-4 text-sm text-slate-500">
+                <span class="inline-flex items-center gap-1"><span class="material-symbols-rounded
+                        text-xmas-gold">verified_user</span> Pago seguro</span>
+                <span class="inline-flex
+                    items-center gap-1"><span class="material-symbols-rounded text-xmas-gold">favorite</span>
+                    Satisfacción garantizada</span>
+                <span class="inline-flex items-center gap-1"><span
+                        class="material-symbols-rounded text-xmas-gold">support_agent</span> Atención
+                    personalizada</span>
+            </div>
+        </div>
+    </footer>
+
+    <a id="whatsappFloat" href="#" aria-label="Abrir WhatsApp" class="fixed bottom-5 right-5 z-50 inline-flex items-center justify-center w-14
+        h-14 rounded-full bg-xmas-green text-white shadow-xl hover:bg-pine transition pulse focus-ring">
+        <span class="material-symbols-rounded text-[28px]">whatsapp</span>
+    </a>
+
+    <div id="freeModal" class="fixed
+        inset-0 z-[60] hidden" aria-hidden="true">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative max-w-lg w-[92%] sm:w-full mx-auto mt-20 bg-white rounded-2xl border border-slate-200
+            shadow-2xl animate-appear p-6" role="dialog" aria-modal="true" aria-labelledby="freeModalTitle"
+            tabindex="-1">
+            <div class="flex items-start justify-between gap-4">
+                <div>
+                    <h3 id="freeModalTitle" class="font-display text-xl font-bold">Descarga gratuita</h3>
+                    <p id="freeModalSubtitle" class="text-sm text-slate-600 mt-1">Déjanos tus datos para enviarte
+                        el recurso.</p>
+                </div>
+                <button type="button" class="focus-ring inline-flex items-center
+                    justify-center w-10 h-10 rounded-lg hover:bg-slate-100" data-close-free>
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </div>
+            <form id="freeForm" class="mt-4 space-y-4" novalidate>
+                <input type="hidden" name="fromEvent" id="fromEvent">
+
+                <input type="hidden" name="productName" id="productName">
+                <div>
+                    <label for="name" class="block text-sm font-medium">Nombre y apellido</label>
+                    <input id="name" name="name" type="text" autocomplete="name" class="mt-1 w-full rounded-lg border-slate-300
+                        focus:border-xmas-gold focus:ring-xmas-gold" placeholder="Tu nombre" required>
+                    <p id="nameError" class="mt-1 text-xs text-red-600 hidden">Ingresa un nombre válido.</p>
+
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Correo electrónico</label>
+
+                    <input id="email" name="email" type="email" autocomplete="email" class="mt-1 w-full
+                        rounded-lg border-slate-300 focus:border-xmas-gold focus:ring-xmas-gold"
+                        placeholder="tu@email.com" required>
+                    <p id="emailError" class="mt-1 text-xs text-red-600
+                        hidden">Ingresa un correo válido.</p>
+                </div>
+                <div>
+                    <label for="phone" class="block
+                        text-sm font-medium">WhatsApp (opcional)</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" class="mt-1 w-full rounded-lg border-slate-300
+                        focus:border-xmas-gold focus:ring-xmas-gold" placeholder="+1 234 567 890">
+                </div>
+                <div class="flex items-start gap-2">
+                    <input id="privacy" type="checkbox" class="mt-1 rounded
+                        border-slate-300 text-xmas-red focus:ring-xmas-gold">
+                    <label for="privacy" class="text-sm
+                        text-slate-600">Acepto recibir el recurso y comunicaciones relacionadas. Podrás darte de baja
+                        cuando quieras.</label>
+                </div>
+                <p id="formMsg" class="text-sm hidden"></p>
+                <div class="flex items-center gap-3">
+                    <button id="freeSubmit" type="submit" class="inline-flex
+                        items-center gap-2 bg-xmas-red text-white px-5 py-2.5 rounded-xl hover:bg-xmas-redDark
+                        transition focus-ring">
+                        <span class="material-symbols-rounded">download</span> Descargar
+                        ahora
+                    </button>
+                    <a id="freeWhatsapp" href="#" target="_blank" class="text-sm
+                        text-xmas-green hover:underline">¿Dudas? Escríbenos por WhatsApp</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="checkoutModal" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative max-w-3xl w-[96%] sm:w-11/12 mx-auto
+            mt-16 bg-white rounded-2xl border border-slate-200 shadow-2xl animate-appear" role="dialog"
+            aria-modal="true" aria-labelledby="checkoutTitle" tabindex="-1">
+            <div class="flex items-center
+                justify-between px-6 py-4 border-b border-slate-200">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-rounded text-xmas-green">lock</span>
+                    <h3 id="checkoutTitle" class="font-display text-xl font-bold">Checkout</h3>
+                </div>
+                <button type="button"
+                    class="focus-ring inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-slate-100"
+                    data-close-checkout>
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </div>
+
+            <div class="p-2 sm:p-4">
+                <iframe id="checkoutFrame" src="https://google.com" class="w-full h-[70vh]
+                    rounded-xl border-0" title="Ventana de pago"></iframe>
+            </div>
+            <div class="px-6 py-4 border-t
+                border-slate-200 text-sm text-slate-600 flex items-center justify-between flex-wrap gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="inline-flex items-center gap-1"><span
+                            class="material-symbols-rounded text-xmas-gold">verified_user</span> Pago seguro</span>
+
+                    <span class="inline-flex items-center gap-1"><span class="material-symbols-rounded
+                            text-xmas-gold">schedule</span> Oferta navideña limitada</span>
+                </div>
+                <a id="checkoutWhatsapp" href="#" class="text-xmas-green hover:underline">Necesito ayuda</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const $json = [{
+            businessName: "AGA Social",
+            whatsappNumber: "+16574145114",
+            products: [
+                {
+                    name: "Checklist: 7 pasos para Implementar IA en tu Empresa de Servicios",
+                    description: "Descarga gratis esta checklist práctica para empezar a implementar inteligencia artificial en tu empresa de servicios. Incluye los 7 pasos clave para automatizar tareas, ahorrar tiempo y aumentar tus resultados sin complicaciones.",
+                    price: 0,
+                    target_audience: "Emprendedores, agencias, clínicas o negocios de servicios que quieren usar IA para ser más productivos y vender más."
+                },
+                {
+                    name: "Paquete 360°: Landing + MiniChat",
+                    description: "Landing Page profesional e integración con MiniChat para Instagram. Un paquete redondo y completo para captar clientes automáticamente y escalar tus ventas.",
+                    price: 360,
+                    target_audience: "Emprendedores y dueños de negocios que quieren aumentar sus ventas en Instagram con automatización y embudos inteligentes."
+                }
+            ]
+        }];
+
+        const AUTH_USER = "2qy53htsbgqy54uw6jtrnsdf";
+        const AUTH_PASS = "gawreoigoidsfhvbqaw34gtqa3w";
+        const N8N_ENDPOINT = "https://n8n.aga.social/webhook/landing-page-forms";
+
+        function slugify(str) {
+            return (str || "")
+                .toString()
+                .normalize('NFD').replace(/[\\u0300-\\u036f]/g, '')
+                .replace(/[^a-zA-Z0-9\\s-]/g, '')
+                .trim()
+                .replace(/\\s+/g, '-')
+                .replace(/-+/g, '-')
+                .toLowerCase();
+        }
+
+        function formatPrice(n) {
+            if (Number(n) === 0) return "Gratis";
+            return "USD $" + new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(n);
+        }
+
+        function openModal(modalEl) {
+            modalEl.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            const focusable = modalEl.querySelector('[tabindex="-1"]') || modalEl.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            focusable && focusable.focus({ preventScroll: true });
+            trapFocus(modalEl);
+        }
+
+        function closeModal(modalEl) {
+            modalEl.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            releaseTrap(modalEl);
+        }
+
+        let focusTrapHandler = null;
+        function trapFocus(modalEl) {
+            const selectors = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+            const focusables = Array.from(modalEl.querySelectorAll(selectors)).filter(el => el.offsetParent !== null);
+            if (focusables.length === 0) return;
+            const first = focusables[0];
+            const last = focusables[focusables.length - 1];
+            focusTrapHandler = (e) => {
+                if (e.key === 'Escape') {
+                    if (modalEl.id === 'freeModal') closeModal(document.getElementById('freeModal'));
+                    if (modalEl.id === 'checkoutModal') closeModal(document.getElementById('checkoutModal'));
+                }
+                if (e.key === 'Tab') {
+                    if (e.shiftKey && document.activeElement === first) {
+                        e.preventDefault(); last.focus();
+                    } else if (!e.shiftKey && document.activeElement === last) {
+                        e.preventDefault(); first.focus();
+                    }
+                }
+            };
+            document.addEventListener('keydown', focusTrapHandler);
+            modalEl.addEventListener('click', (e) => {
+                if (e.target === modalEl || e.target === modalEl.firstElementChild) {
+                    closeModal(modalEl);
+                }
+            }, { once: true });
+        }
+        function releaseTrap() {
+            if (focusTrapHandler) document.removeEventListener('keydown', focusTrapHandler);
+            focusTrapHandler = null;
+        }
+
+        function renderPricing() {
+            const data = $json[0];
+            const grid = document.getElementById('pricingGrid');
+            grid.innerHTML = '';
+            if (!data || !Array.isArray(data.products) || data.products.length === 0) return;
+
+            data.products.forEach((p, idx) => {
+                const isFree = Number(p.price) === 0;
+                const slug = slugify(p.name);
+                const card = document.createElement('div');
+                card.className = "relative p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition animate-fade-up";
+                card.innerHTML = `
+        <div class="absolute -top-3 -right-3 bg-xmas-gold text-xmas-red text-xs font-bold px-3 py-1 rounded-full shadow">Navidad</div>
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-display text-xl font-bold">${p.name}</h3>
+            <p class="mt-1 text-slate-600 text-sm">${p.description}</p>
+          </div>
+          <span class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-xmas-red/10 text-xmas-red">
+            <span class="material-symbols-rounded">${isFree ? 'download' : 'shopping_bag'}</span>
+          </span>
+        </div>
+        <div class="mt-5 p-4 rounded-xl bg-cream border border-slate-200">
+          <p class="text-sm text-slate-500">Ideal para</p>
+          <p class="font-medium text-slate-800">${p.target_audience || ''}</p>
+        </div>
+        <div class="mt-6 flex items-end justify-between">
+          <div>
+            <div class="text-2xl font-extrabold ${isFree ? 'text-xmas-green' : 'text-xmas-red'}">${formatPrice(p.price)}</div>
+            <p class="text-xs text-slate-500">${isFree ? 'Recurso 100% gratuito' : 'Incluye garantía de satisfacción'}</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <span class="material-symbols-rounded text-xmas-gold">verified</span> Pago seguro
+          </div>
+        </div>
+        <div class="mt-5 flex flex-col sm:flex-row gap-3">
+          <button data-idx="${idx}" class="primary-cta inline-flex items-center justify-center gap-2 ${isFree ? 'bg-xmas-green hover:bg-pine' : 'bg-xmas-red hover:bg-xmas-redDark'} text-white px-5 py-2.5 rounded-xl transition focus-ring">
+            <span class="material-symbols-rounded">${isFree ? 'file_download' : 'bolt'}</span>
+            ${isFree ? 'Descargar gratis' : 'Comprar ahora'}
+          </button>
+          <a href="https://wa.me/${encodeURIComponent(data.whatsappNumber)}?text=${encodeURIComponent('Hola! Estoy interesado en tu producto: ' + p.name)}" target="_blank" class="inline-flex items-center justify-center gap-2 border border-slate-300 text-slate-700 px-5 py-2.5 rounded-xl hover:bg-slate-50 transition focus-ring">
+            <span class="material-symbols-rounded">chat</span> Consultar por WhatsApp
+          </a>
+        </div>
+        ${!isFree ? `
+          <div class="mt-4 text-xs text-slate-600 flex items-center gap-3 flex-wrap">
+            <span class="inline-flex items-center gap-1"><span class="material-symbols-rounded text-xmas-gold">shield</span> Protección de pago</span>
+            <span class="inline-flex items-center gap-1"><span class="material-symbols-rounded text-xmas-gold">rebase</span> Soporte dedicado</span>
+            <span class="inline-flex items-center gap-1"><span class="material-symbols-rounded text-xmas-gold">schedule</span> Entrega express</span>
+          </div>
+        ` : ''}
+      `;
+                grid.appendChild(card);
+
+                const cta = card.querySelector('.primary-cta');
+                cta.addEventListener('click', () => {
+                    if (isFree) openFree(p);
+                    else openCheckout(p);
+                });
+            });
+        }
+
+        function openFree(product) {
+            const modal = document.getElementById('freeModal');
+            const title = document.getElementById('freeModalTitle');
+            const subtitle = document.getElementById('freeModalSubtitle');
+            const fromEventInput = document.getElementById('fromEvent');
+            const productNameInput = document.getElementById('productName');
+            const freeWhatsapp = document.getElementById('freeWhatsapp');
+            const slug = slugify(product.name);
+            title.textContent = "Descarga: " + product.name;
+            subtitle.textContent = "Te enviaremos la checklist por correo y la descarga iniciará automáticamente.";
+            fromEventInput.value = slug;
+            productNameInput.value = product.name;
+            const wa = `https://wa.me/${encodeURIComponent($json[0].whatsappNumber)}?text=${encodeURIComponent('Hola! Tengo una duda sobre la descarga: ' + product.name)}`;
+            freeWhatsapp.href = wa;
+            openModal(modal);
+        }
+
+        function openCheckout(product) {
+            const modal = document.getElementById('checkoutModal');
+            const title = document.getElementById('checkoutTitle');
+            const checkoutWhatsapp = document.getElementById('checkoutWhatsapp');
+            title.textContent = "Checkout — " + product.name;
+            const wa = `https://wa.me/${encodeURIComponent($json[0].whatsappNumber)}?text=${encodeURIComponent('Hola! Quiero comprar: ' + product.name)}`;
+            checkoutWhatsapp.href = wa;
+            openModal(modal);
+        }
+
+        function setupModals() {
+            const freeModal = document.getElementById('freeModal');
+            const checkoutModal = document.getElementById('checkoutModal');
+            freeModal.querySelector('[data-close-free]').addEventListener('click', () => closeModal(freeModal));
+            checkoutModal.querySelector('[data-close-checkout]').addEventListener('click', () => closeModal(checkoutModal));
+        }
+
+        function setupWhatsAppCTAs() {
+            const phone = $json[0].whatsappNumber || '+16574145114';
+            const encoded = `https://wa.me/${encodeURIComponent(phone)}?text=${encodeURIComponent('Hola! Estoy interesado en tu producto')}`;
+            document.getElementById('whatsappFloat').href = encoded;
+            document.getElementById('heroWhatsapp').href = encoded;
+            document.getElementById('navWhatsapp').href = encoded;
+            document.getElementById('ctaWhatsapp').href = encoded;
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+        }
+
+        function setupFreeForm() {
+            const form = document.getElementById('freeForm');
+            const btn = document.getElementById('freeSubmit');
+            const msg = document.getElementById('formMsg');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const fromEvent = document.getElementById('fromEvent').value;
+                const productName = document.getElementById('productName').value;
+                const privacy = document.getElementById('privacy').checked;
+
+                const nameError = document.getElementById('nameError');
+                const emailError = document.getElementById('emailError');
+                nameError.classList.add('hidden');
+                emailError.classList.add('hidden');
+                msg.classList.add('hidden');
+                msg.textContent = '';
+                msg.className = 'text-sm hidden';
+
+                let valid = true;
+                if (name.length < 2) { nameError.classList.remove('hidden'); valid = false; }
+                if (!validateEmail(email)) { emailError.classList.remove('hidden'); valid = false; }
+                if (!privacy) {
+                    msg.textContent = 'Por favor acepta la política de privacidad.';
+                    msg.className = 'text-sm text-red-600';
+                    msg.classList.remove('hidden');
+                    valid = false;
+                }
+                if (!valid) return;
+
+                btn.disabled = true;
+                btn.innerHTML = '<span class="material-symbols-rounded animate-spin">progress_activity</span> Enviando...';
+
+                try {
+                    const payload = {
+                        name, email, phone, fromEvent,
+                        productName,
+                        businessName: $json[0].businessName || 'AGA Social',
+                        source: 'landing',
+                        timestamp: new Date().toISOString()
+                    };
+                    const res = await fetch(N8N_ENDPOINT, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Basic ' + btoa(AUTH_USER + ':' + AUTH_PASS)
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!res.ok) throw new Error('Error de envío');
+
+                    msg.textContent = '¡Listo! Te enviamos el recurso a tu correo. La descarga iniciará automáticamente.';
+                    msg.className = 'text-sm text-xmas-green';
+                    msg.classList.remove('hidden');
+
+                    const slug = fromEvent;
+                    const link = document.createElement('a');
+                    link.href = '/downloads/' + slug + '.pdf';
+                    link.download = '';
+                    document.body.appendChild(link);
+                    link.click();
+                    link.remove();
+
+                    setTimeout(() => {
+                        btn.disabled = false;
+                        btn.innerHTML = '<span class="material-symbols-rounded">download</span> Descargar ahora';
+                        closeModal(document.getElementById('freeModal'));
+                        form.reset();
+                    }, 1800);
+                } catch (err) {
+                    msg.textContent = 'Hubo un problema. Intenta nuevamente o contáctanos por WhatsApp.';
+                    msg.className = 'text-sm text-red-600';
+                    msg.classList.remove('hidden');
+                    btn.disabled = false;
+                    btn.innerHTML = '<span class="material-symbols-rounded">download</span> Descargar ahora';
+                }
+            });
+        }
+
+        function animateOnScroll() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('in-view');
+                        observer.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('.animate-fade-up, .animate-appear').forEach(el => observer.observe(el));
+        }
+
+        function setYear() {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupWhatsAppCTAs();
+            renderPricing();
+            setupModals();
+            setupFreeForm();
+            animateOnScroll();
+            setYear();
+        });
+    </script>
+
+
+</body>
+
+
+</html>
