@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Paquete 360°: Landing + ManyChat | Aumenta tus ventas en Instagram</title>
-  <meta name="description" content="Paquete completo para captar clientes en Instagram: Landing Page + integración con ManyChat. Automatiza tu captación y aumenta tus ventas.">
+  <meta name="description"
+    content="Paquete completo para captar clientes en Instagram: Landing Page + integración con ManyChat. Automatiza tu captación y aumenta tus ventas.">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -19,33 +21,65 @@
       --text: #23243A;
       --subtext: #6B7280;
     }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0; padding: 0;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
       font-family: 'Montserrat', Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
-    a { color: var(--primary); text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    h1, h2, h3 {
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1,
+    h2,
+    h3 {
       margin-top: 0;
       font-weight: 700;
     }
-    h1 {font-size: 2.3rem;}
-    h2 {font-size: 2rem;}
-    h3 {font-size: 1.2rem;}
-    .container {
-      width: 92%; max-width: 1100px; margin: 0 auto;
+
+    h1 {
+      font-size: 2.3rem;
     }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     .section {
       padding: 60px 0;
     }
+
     .center {
       text-align: center;
     }
+
     .btn {
       display: inline-block;
       background: var(--primary);
@@ -56,13 +90,18 @@
       border: none;
       font-size: 1.10rem;
       margin-top: 20px;
-      box-shadow: 0 4px 24px 0 rgba(68,63,230,.08);
+      box-shadow: 0 4px 24px 0 rgba(68, 63, 230, .08);
       transition: background 0.23s, box-shadow 0.2s, transform 0.16s;
       cursor: pointer;
       outline: none;
       letter-spacing: .04em;
     }
-    .btn:hover { background: var(--primary-hover); transform: translateY(-2px) scale(1.04);}
+
+    .btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px) scale(1.04);
+    }
+
     /* Hero */
     .hero {
       background: linear-gradient(115deg, var(--primary) 0%, #89A2FA 100%);
@@ -71,25 +110,37 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero .container {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 40px;
     }
+
     .hero-content {
       flex: 1 1 360px;
     }
+
     .hero-image {
       flex: 1 1 320px;
       min-width: 280px;
       max-width: 440px;
       animation: fadeInImg 1.3s;
     }
+
     @keyframes fadeInImg {
-      0% { opacity: 0; transform: scale(1.08);}
-      100% {opacity:1; transform: scale(1);}
+      0% {
+        opacity: 0;
+        transform: scale(1.08);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
+
     .hero-title {
       font-size: 2.45rem;
       letter-spacing: -1px;
@@ -97,12 +148,14 @@
       line-height: 1.15;
       animation: fadeInUp 0.8s;
     }
+
     .hero-row {
       display: flex;
       gap: 15px;
       align-items: center;
       flex-wrap: wrap;
     }
+
     .hero-sub {
       font-size: 1.21rem;
       color: #e2e7ff;
@@ -110,6 +163,7 @@
       max-width: 470px;
       animation: fadeInUp 1s;
     }
+
     .trust-badges {
       display: flex;
       align-items: center;
@@ -117,14 +171,24 @@
       margin-top: 18px;
       flex-wrap: wrap;
     }
+
     .trust-badge-img {
       height: 32px;
-      filter: brightness(1.1) drop-shadow(0 1px 2px rgba(68,63,230,.2));
+      filter: brightness(1.1) drop-shadow(0 1px 2px rgba(68, 63, 230, .2));
     }
+
     @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(36px);}
-      100% {opacity:1; transform: translateY(0);}
+      0% {
+        opacity: 0;
+        transform: translateY(36px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     /* Problem Section */
     .problem-list {
       display: flex;
@@ -133,10 +197,11 @@
       margin-top: 35px;
       justify-content: center;
     }
+
     .problem-card {
       background: var(--white);
       border-radius: 18px;
-      box-shadow: 0 6px 32px 0 rgba(76,73,129,.06);
+      box-shadow: 0 6px 32px 0 rgba(76, 73, 129, .06);
       padding: 28px 25px 30px;
       display: flex;
       align-items: start;
@@ -145,16 +210,23 @@
       min-width: 260px;
       animation: fadeInUp 0.82s;
     }
+
     .problem-icon {
       font-size: 2.2rem;
       color: var(--danger);
       margin-right: 6px;
       flex-shrink: 0;
     }
+
     /* Solution Section */
     .benefits-list {
-      display: flex; gap: 35px; flex-wrap: wrap; margin-top: 20px; justify-content: center;
+      display: flex;
+      gap: 35px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      justify-content: center;
     }
+
     .benefit-card {
       background: var(--gray);
       border-radius: 16px;
@@ -162,16 +234,22 @@
       max-width: 302px;
       min-width: 220px;
       transition: box-shadow .18s, transform .13s;
-      box-shadow: 0 2px 16px 0 rgba(89,98,234,.07);
+      box-shadow: 0 2px 16px 0 rgba(89, 98, 234, .07);
       animation: fadeInUp 0.82s;
     }
-    .benefit-card:hover { box-shadow: 0 8px 28px 0 rgba(83,97,240,.18); transform: translateY(-4px) scale(1.03);}
+
+    .benefit-card:hover {
+      box-shadow: 0 8px 28px 0 rgba(83, 97, 240, .18);
+      transform: translateY(-4px) scale(1.03);
+    }
+
     .benefit-icon {
       color: var(--accent);
       font-size: 2.0rem;
       margin-bottom: 7px;
       display: block;
     }
+
     /* Features */
     .features-list {
       display: grid;
@@ -179,46 +257,78 @@
       gap: 28px;
       margin-top: 30px;
     }
+
     .feature-card {
       background: var(--white);
       border-radius: 12px;
-      box-shadow: 0 3px 16px 0 rgba(76,73,129,.07);
+      box-shadow: 0 3px 16px 0 rgba(76, 73, 129, .07);
       padding: 26px 20px 15px;
-      display: flex; flex-direction: column; align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .feature-card img { height: 42px; margin-bottom: 14px; }
+
+    .feature-card img {
+      height: 42px;
+      margin-bottom: 14px;
+    }
+
     /* Social Proof */
     .testimonials {
-      display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top:35px;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 35px;
     }
+
     .testimonial-card {
       background: var(--gray);
       border-radius: 17px;
       padding: 28px 24px 28px;
       max-width: 320px;
       min-width: 230px;
-      box-shadow: 0 2px 18px 0 rgba(68,63,230,.06);
+      box-shadow: 0 2px 18px 0 rgba(68, 63, 230, .06);
       position: relative;
     }
+
     .testimonial-card:before {
       content: '“';
       font-size: 3.7rem;
       color: var(--primary);
-      position: absolute; left: 18px; top: 5px; opacity: .18;
+      position: absolute;
+      left: 18px;
+      top: 5px;
+      opacity: .18;
       font-family: Georgia, Times, "Times New Roman", serif;
     }
+
     .testimonial-avatar {
-      width: 44px; height: 44px; border-radius: 50%; object-fit: cover; margin-right:10px; border: 3px solid var(--primary);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+      border: 3px solid var(--primary);
     }
+
     .testimonial-user {
-      display: flex; align-items: center; margin-top: 18px;
+      display: flex;
+      align-items: center;
+      margin-top: 18px;
     }
+
     .testimonial-name {
-      font-weight: bold; color:var(--primary); font-size:.95em;
+      font-weight: bold;
+      color: var(--primary);
+      font-size: .95em;
     }
+
     .testimonial-role {
-      font-size: .86em; color: var(--subtext);
+      font-size: .86em;
+      color: var(--subtext);
     }
+
     /* Pricing */
     .pricing-section {
       background: linear-gradient(96deg, var(--primary) 30%, #b7dcfd 100%);
@@ -226,11 +336,12 @@
       border-radius: 35px;
       margin: 0 auto 45px;
       padding: 48px 28px 41px;
-      box-shadow: 0 8px 32px 0 rgba(83,97,240,.13);
+      box-shadow: 0 8px 32px 0 rgba(83, 97, 240, .13);
       max-width: 560px;
       animation: fadeInUp 0.8s;
       position: relative;
     }
+
     .price {
       font-size: 2.5rem;
       font-weight: 900;
@@ -238,14 +349,16 @@
       margin-bottom: 10px;
       letter-spacing: -2px;
     }
+
     .old-price {
       color: #d3d8fe;
       text-decoration: line-through;
       font-size: 1.1rem;
       margin-left: 18px;
       font-weight: normal;
-      letter-spacing:0;
+      letter-spacing: 0;
     }
+
     .limited-offer {
       display: inline-block;
       background: var(--danger);
@@ -255,26 +368,40 @@
       padding: 6px 17px;
       border-radius: 20px;
       margin-bottom: 17px;
-      margin-right:12px;
-      letter-spacing:.05em;
+      margin-right: 12px;
+      letter-spacing: .05em;
       animation: pulse 1.45s infinite;
     }
+
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255,90,95,.25);}
-      80% { box-shadow: 0 0 0 10px rgba(255,90,95,0);}
-      100% { box-shadow: 0 0 0 0 rgba(255,90,95,0);}
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 90, 95, .25);
+      }
+
+      80% {
+        box-shadow: 0 0 0 10px rgba(255, 90, 95, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 90, 95, 0);
+      }
     }
+
     /* FAQ */
     .faq-list {
       max-width: 700px;
       margin: 39px auto 0;
-      border-radius:19px;
+      border-radius: 19px;
       background: var(--gray);
-      box-shadow: 0 2px 14px 0 rgba(97,110,244,.07);
+      box-shadow: 0 2px 14px 0 rgba(97, 110, 244, .07);
       padding: 9px 0;
       position: relative;
     }
-    .faq-item + .faq-item { border-top: 1px solid #e2e8f5;}
+
+    .faq-item+.faq-item {
+      border-top: 1px solid #e2e8f5;
+    }
+
     .faq-question {
       padding: 22px 32px 16px;
       cursor: pointer;
@@ -285,6 +412,7 @@
       align-items: center;
       color: var(--primary);
     }
+
     .faq-answer {
       padding: 0 32px 18px 32px;
       color: var(--subtext);
@@ -292,14 +420,22 @@
       display: none;
       animation: fadeInUp .47s;
     }
-    .faq-item.open .faq-answer {display: block;}
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
     .faq-toggle {
       font-size: 1.6rem;
       font-weight: bold;
       margin-left: 14px;
       transition: transform .23s;
     }
-    .faq-item.open .faq-toggle { transform: rotate(45deg);}
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+    }
+
     /* Final CTA */
     .final-cta-section {
       text-align: center;
@@ -307,9 +443,10 @@
       background: var(--white);
       margin-top: 38px;
       border-radius: 23px;
-      box-shadow: 0 2px 16px 0 rgba(83,97,240,.08);
+      box-shadow: 0 2px 16px 0 rgba(83, 97, 240, .08);
       animation: fadeInUp 1s;
     }
+
     /* Footer */
     footer {
       background: var(--primary);
@@ -320,6 +457,7 @@
       border-radius: 0 0 18px 18px;
       margin-top: 40px;
     }
+
     /* WhatsApp floating button */
     .whatsapp-float {
       position: fixed;
@@ -328,42 +466,104 @@
       z-index: 99;
       background: #25d366;
       color: #fff;
-      width: 64px; height: 64px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
-      box-shadow: 0 6px 28px 0 rgba(37,211,102,.23), 0 2px 8px 0 rgba(47,47,47,.06);
-      display: flex; justify-content: center; align-items: center;
+      box-shadow: 0 6px 28px 0 rgba(37, 211, 102, .23), 0 2px 8px 0 rgba(47, 47, 47, .06);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
       transition: background .24s, transform .19s;
       font-size: 2.4rem;
       animation: fadeInUp .6s;
     }
-    .whatsapp-float:hover { background: #22bb57; transform: scale(1.08) translateY(-3px);}
+
+    .whatsapp-float:hover {
+      background: #22bb57;
+      transform: scale(1.08) translateY(-3px);
+    }
+
     /* Responsive */
     @media (max-width:950px) {
-      .hero .container { flex-direction: column;}
-      .hero-image {max-width:340px;}
+      .hero .container {
+        flex-direction: column;
+      }
+
+      .hero-image {
+        max-width: 340px;
+      }
     }
+
     @media (max-width:650px) {
-      h1 {font-size: 1.45rem;}
-      h2 {font-size: 1.15rem;}
-      .section {padding:36px 0;}
-      .hero {padding:45px 0 30px 0;}
-      .pricing-section {padding: 35px 10px;}
-      .faq-list {padding:0;}
+      h1 {
+        font-size: 1.45rem;
+      }
+
+      h2 {
+        font-size: 1.15rem;
+      }
+
+      .section {
+        padding: 36px 0;
+      }
+
+      .hero {
+        padding: 45px 0 30px 0;
+      }
+
+      .pricing-section {
+        padding: 35px 10px;
+      }
+
+      .faq-list {
+        padding: 0;
+      }
     }
+
     @media (max-width:480px) {
-      .problem-list, .benefits-list, .features-list, .testimonials {flex-direction: column; gap:19px;}
-      .problem-card, .benefit-card, .feature-card, .testimonial-card { min-width: unset; max-width: 95vw;}
-      .pricing-section {padding: 24px 3vw;}
-      .final-cta-section {padding:25px 2vw;}
-      .whatsapp-float {right: 10px;bottom: 17px;}
+
+      .problem-list,
+      .benefits-list,
+      .features-list,
+      .testimonials {
+        flex-direction: column;
+        gap: 19px;
+      }
+
+      .problem-card,
+      .benefit-card,
+      .feature-card,
+      .testimonial-card {
+        min-width: unset;
+        max-width: 95vw;
+      }
+
+      .pricing-section {
+        padding: 24px 3vw;
+      }
+
+      .final-cta-section {
+        padding: 25px 2vw;
+      }
+
+      .whatsapp-float {
+        right: 10px;
+        bottom: 17px;
+      }
     }
   </style>
 </head>
+
 <body>
   <!-- WhatsApp Floating Button -->
   <div class="whatsapp-float" id="whatsappBtn" aria-label="Chatea por WhatsApp">
-    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#25D366"/><path d="M23.333 20.696c-.357-.181-2.107-1.034-2.431-1.154-.324-.12-.561-.181-.799.182-.239.362-.917 1.154-1.126 1.392-.208.239-.417.27-.774.09-.357-.18-1.512-.557-2.885-1.776-1.066-.955-1.786-2.138-1.997-2.495-.208-.358-.022-.551.157-.731.162-.163.364-.422.547-.633.181-.209.241-.36.363-.6.12-.238.06-.449-.03-.63s-.799-1.927-1.091-2.643c-.288-.687-.581-.59-.799-.601-.206-.008-.449-.009-.689-.009-.239 0-.632.09-.962.45-.331.36-1.262 1.234-1.262 3.002 0 1.77 1.294 3.471 1.474 3.712.181.238 2.548 3.898 6.178 5.018.856.273 1.523.436 2.045.558.858.184 1.64.158 2.258.095.689-.072 2.107-.86 2.406-1.693.297-.832.297-1.543.208-1.693-.09-.15-.328-.239-.684-.42z" fill="#fff"/></svg>
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+      <circle cx="17" cy="17" r="17" fill="#25D366" />
+      <path
+        d="M23.333 20.696c-.357-.181-2.107-1.034-2.431-1.154-.324-.12-.561-.181-.799.182-.239.362-.917 1.154-1.126 1.392-.208.239-.417.27-.774.09-.357-.18-1.512-.557-2.885-1.776-1.066-.955-1.786-2.138-1.997-2.495-.208-.358-.022-.551.157-.731.162-.163.364-.422.547-.633.181-.209.241-.36.363-.6.12-.238.06-.449-.03-.63s-.799-1.927-1.091-2.643c-.288-.687-.581-.59-.799-.601-.206-.008-.449-.009-.689-.009-.239 0-.632.09-.962.45-.331.36-1.262 1.234-1.262 3.002 0 1.77 1.294 3.471 1.474 3.712.181.238 2.548 3.898 6.178 5.018.856.273 1.523.436 2.045.558.858.184 1.64.158 2.258.095.689-.072 2.107-.86 2.406-1.693.297-.832.297-1.543.208-1.693-.09-.15-.328-.239-.684-.42z"
+        fill="#fff" />
+    </svg>
   </div>
   <!-- HERO -->
   <section class="hero" id="hero">
@@ -374,19 +574,25 @@
           Captura más clientes en Instagram<span style="color:var(--secondary);"> automáticamente</span>
         </h1>
         <div class="hero-sub">
-          Consigue una <strong>Landing Page profesional</strong> + integración full con <b>ManyChat para Instagram</b>.<br> Automatiza tu captación, conversa y vende <span style="text-decoration:underline;">24/7</span>.
+          Consigue una <strong>Landing Page profesional</strong> + integración full con <b>ManyChat para
+            Instagram</b>.<br> Automatiza tu captación, conversa y vende <span
+            style="text-decoration:underline;">24/7</span>.
         </div>
         <div class="hero-row">
           <a href="#precio" class="btn">Reservar Paquete 360°</a>
         </div>
         <div class="trust-badges" style="margin-top:32px;">
           <img class="trust-badge-img" src="https://img.icons8.com/fluency/48/000000/lock.png" alt="Sitio Seguro">
-          <img class="trust-badge-img" src="https://img.icons8.com/fluency/48/000000/guarantee.png" alt="Garantía de Satisfacción">
-          <img class="trust-badge-img" src="https://img.icons8.com/color/48/000000/online-support.png" alt="Soporte Total">
+          <img class="trust-badge-img" src="https://img.icons8.com/fluency/48/000000/guarantee.png"
+            alt="Garantía de Satisfacción">
+          <img class="trust-badge-img" src="https://img.icons8.com/color/48/000000/online-support.png"
+            alt="Soporte Total">
         </div>
       </div>
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Landing Page y ManyChat en móviles" style="border-radius:28px; box-shadow:0 6px 48px 0 rgba(37,47,100,.22)">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
+          alt="Landing Page y ManyChat en móviles"
+          style="border-radius:28px; box-shadow:0 6px 48px 0 rgba(37,47,100,.22)">
       </div>
     </div>
   </section>
@@ -406,14 +612,16 @@
           <span class="problem-icon">⏱️</span>
           <div>
             <b>Pierdes tiempo respondiendo mensajes</b>
-            <div style="color:var(--subtext);margin-top:11px;">Respondes lo mismo cada día y se te escapan potenciales clientes.</div>
+            <div style="color:var(--subtext);margin-top:11px;">Respondes lo mismo cada día y se te escapan potenciales
+              clientes.</div>
           </div>
         </div>
         <div class="problem-card">
           <span class="problem-icon">💸</span>
           <div>
             <b>Tu web no convierte visitantes en ventas</b>
-            <div style="color:var(--subtext);margin-top:11px;">Tu página no inspira confianza o no tiene CTAs claros.</div>
+            <div style="color:var(--subtext);margin-top:11px;">Tu página no inspira confianza o no tiene CTAs claros.
+            </div>
           </div>
         </div>
       </div>
@@ -427,22 +635,26 @@
         <div class="benefit-card">
           <span class="benefit-icon">⚡</span>
           <h3>Capta clientes 24/7</h3>
-          <div style="color:var(--subtext);margin-top:10px;">ManyChat responde automáticamente fuera de horario y nunca pierdes una oportunidad.</div>
+          <div style="color:var(--subtext);margin-top:10px;">ManyChat responde automáticamente fuera de horario y nunca
+            pierdes una oportunidad.</div>
         </div>
         <div class="benefit-card">
           <span class="benefit-icon">💬</span>
           <h3>Convierte conversaciones en ventas</h3>
-          <div style="color:var(--subtext);margin-top:10px;">Automatizaciones pensadas para llevar a tus seguidores al cierre.</div>
+          <div style="color:var(--subtext);margin-top:10px;">Automatizaciones pensadas para llevar a tus seguidores al
+            cierre.</div>
         </div>
         <div class="benefit-card">
           <span class="benefit-icon">📱</span>
           <h3>Imagen profesional e irresistible</h3>
-          <div style="color:var(--subtext);margin-top:10px;">Landing clara, móvil y adaptada para inspirar confianza instantánea.</div>
+          <div style="color:var(--subtext);margin-top:10px;">Landing clara, móvil y adaptada para inspirar confianza
+            instantánea.</div>
         </div>
         <div class="benefit-card">
           <span class="benefit-icon">⏳</span>
           <h3>Ahorra tiempo cada día</h3>
-          <div style="color:var(--subtext);margin-top:10px;">Libera tu agenda automatizando respuestas y proceso de ventas.</div>
+          <div style="color:var(--subtext);margin-top:10px;">Libera tu agenda automatizando respuestas y proceso de
+            ventas.</div>
         </div>
       </div>
       <a href="#precio" class="btn" style="margin-top:38px;">Obtener Paquete</a>
@@ -456,22 +668,26 @@
         <div class="feature-card">
           <img src="https://img.icons8.com/color/60/monitor--v2.png" alt="Landing profesional">
           <b>Landing Page profesional</b>
-          <div style="color:var(--subtext);margin-top:10px;">Diseño premium, adaptable a móviles, con todas las secciones esenciales para ventas.</div>
+          <div style="color:var(--subtext);margin-top:10px;">Diseño premium, adaptable a móviles, con todas las
+            secciones esenciales para ventas.</div>
         </div>
         <div class="feature-card">
           <img src="https://img.icons8.com/color/60/chat.png" alt="Integración con ManyChat">
           <b>Integración ManyChat Instagram</b>
-          <div style="color:var(--subtext);margin-top:10px;">Conecta tu Instagram y automatiza respuestas, filtros y embudos de venta.</div>
+          <div style="color:var(--subtext);margin-top:10px;">Conecta tu Instagram y automatiza respuestas, filtros y
+            embudos de venta.</div>
         </div>
         <div class="feature-card">
           <img src="https://img.icons8.com/color/60/technical-support.png" alt="Soporte">
           <b>Setup y soporte personalizado</b>
-          <div style="color:var(--subtext);margin-top:10px;">Implementación rápida + acompañamiento para que no te pierdas.</div>
+          <div style="color:var(--subtext);margin-top:10px;">Implementación rápida + acompañamiento para que no te
+            pierdas.</div>
         </div>
         <div class="feature-card">
           <img src="https://img.icons8.com/color/60/thumb-up.png" alt="Resultados garantizados">
           <b>Optimización enfocada en ventas</b>
-          <div style="color:var(--subtext);margin-top:10px;">Estrategias y textos persuasivos basados en psicología de conversión.</div>
+          <div style="color:var(--subtext);margin-top:10px;">Estrategias y textos persuasivos basados en psicología de
+            conversión.</div>
         </div>
       </div>
     </div>
@@ -482,9 +698,11 @@
       <h2 class="center">Lo que opinan nuestros clientes</h2>
       <div class="testimonials">
         <div class="testimonial-card">
-          <div>Gracias al Paquete 360°, ahora recibo mensajes todos los días sin tener que estar pendiente del celular. <b>¡Cerré 5 ventas la primera semana!</b></div>
+          <div>Gracias al Paquete 360°, ahora recibo mensajes todos los días sin tener que estar pendiente del celular.
+            <b>¡Cerré 5 ventas la primera semana!</b></div>
           <div class="testimonial-user">
-            <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/women/88.jpg" alt="Testimonio Cliente">
+            <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/women/88.jpg"
+              alt="Testimonio Cliente">
             <div>
               <div class="testimonial-name">Carla Ruiz</div>
               <div class="testimonial-role">Emprendedora Belleza</div>
@@ -492,9 +710,11 @@
           </div>
         </div>
         <div class="testimonial-card">
-          <div>¡Recomiendo este servicio! Mi Instagram por fin genera clientes sin invertir mi tiempo en contestar lo mismo. Fácil y claro 💯</div>
+          <div>¡Recomiendo este servicio! Mi Instagram por fin genera clientes sin invertir mi tiempo en contestar lo
+            mismo. Fácil y claro 💯</div>
           <div class="testimonial-user">
-            <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/34.jpg" alt="Testimonio Cliente">
+            <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/34.jpg"
+              alt="Testimonio Cliente">
             <div>
               <div class="testimonial-name">Miguel Torres</div>
               <div class="testimonial-role">Dueño de Gym</div>
@@ -502,9 +722,11 @@
           </div>
         </div>
         <div class="testimonial-card">
-          <div>La landing quedó súper profesional y el chat hace TODO automático. De 3 mensajes ahora convierto mínimo 1 en cliente.</div>
+          <div>La landing quedó súper profesional y el chat hace TODO automático. De 3 mensajes ahora convierto mínimo 1
+            en cliente.</div>
           <div class="testimonial-user">
-            <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/12.jpg" alt="Testimonio Cliente">
+            <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/12.jpg"
+              alt="Testimonio Cliente">
             <div>
               <div class="testimonial-name">Pedro Oliva</div>
               <div class="testimonial-role">Tienda de Ropa</div>
@@ -530,7 +752,9 @@
         Incluye todo. Sin costos ocultos. Instalación <u>express</u>.
       </div>
       <div style="margin:16px 0 0;">
-        <a href="https://wa.me/16574145114?text=Hola!%20Quiero%20reservar%20el%20Paquete%20360°:%20Landing%20%2B%20ManyChat%20para%20Instagram" class="btn" style="font-size:1.15em;background:var(--secondary);color:var(--text);margin-right:7px;" target="_blank">Reservar por WhatsApp</a>
+        <a href="https://wa.me/16574145114?text=Hola!%20Quiero%20reservar%20el%20Paquete%20360°:%20Landing%20%2B%20ManyChat%20para%20Instagram"
+          class="btn" style="font-size:1.15em;background:var(--secondary);color:var(--text);margin-right:7px;"
+          target="_blank">Reservar por WhatsApp</a>
         <a href="#faq" class="btn">Resuelve tus dudas</a>
       </div>
       <div style="font-size:1.08em;color:#fff;margin-top:30px;">
@@ -538,7 +762,9 @@
         6 cupos disponibles esta semana
       </div>
       <div style="margin-top:14px;">
-        <img src="https://img.icons8.com/fluency/48/000000/lock.png" alt="Pago Seguro" style="vertical-align:middle;margin-right:6px;"><span style="color:#e5e8ff;font-size:.97em;">Sitio Seguro</span>
+        <img src="https://img.icons8.com/fluency/48/000000/lock.png" alt="Pago Seguro"
+          style="vertical-align:middle;margin-right:6px;"><span style="color:#e5e8ff;font-size:.97em;">Sitio
+          Seguro</span>
       </div>
     </div>
   </section>
@@ -548,23 +774,30 @@
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-question">¿Qué es ManyChat y cómo me ayuda?<span class="faq-toggle">+</span></div>
-        <div class="faq-answer">ManyChat es una plataforma de automatización de mensajes que se conecta a tu Instagram. Responde dudas frecuentes, filtra interesados y guía a tus seguidores hasta convertirse en clientes, sin que tengas que contestar uno a uno.</div>
+        <div class="faq-answer">ManyChat es una plataforma de automatización de mensajes que se conecta a tu Instagram.
+          Responde dudas frecuentes, filtra interesados y guía a tus seguidores hasta convertirse en clientes, sin que
+          tengas que contestar uno a uno.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question">¿Puedo usar mi propio dominio en la landing?<span class="faq-toggle">+</span></div>
-        <div class="faq-answer">¡Sí! La landing puede instalarse en tu dominio actual o uno nuevo. Te ayudamos con toda la configuración.</div>
+        <div class="faq-answer">¡Sí! La landing puede instalarse en tu dominio actual o uno nuevo. Te ayudamos con toda
+          la configuración.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-question">¿Incluye textos persuasivos y diseño personalizado?<span class="faq-toggle">+</span></div>
-        <div class="faq-answer">Sí. Analizamos tu negocio y creamos una landing adaptada a tus objetivos de venta, con textos y llamadas a la acción pensadas para convencer y convertir visitantes en clientes.</div>
+        <div class="faq-question">¿Incluye textos persuasivos y diseño personalizado?<span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">Sí. Analizamos tu negocio y creamos una landing adaptada a tus objetivos de venta, con
+          textos y llamadas a la acción pensadas para convencer y convertir visitantes en clientes.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question">¿En cuánto tiempo está lista la instalación?<span class="faq-toggle">+</span></div>
-        <div class="faq-answer">Tendrás tu Paquete 360° funcionando en 5 días hábiles o menos desde la contratación y confirmación de datos.</div>
+        <div class="faq-answer">Tendrás tu Paquete 360° funcionando en 5 días hábiles o menos desde la contratación y
+          confirmación de datos.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question">¿Hay soporte si tengo dudas o quiero cambios?<span class="faq-toggle">+</span></div>
-        <div class="faq-answer">Por supuesto. Incluimos soporte y ajustes para que no tengas que preocuparte por nada.</div>
+        <div class="faq-answer">Por supuesto. Incluimos soporte y ajustes para que no tengas que preocuparte por nada.
+        </div>
       </div>
     </div>
   </section>
@@ -573,11 +806,15 @@
     <div class="container">
       <h2>¿Listo para transformar tu Instagram en una máquina de captar clientes?</h2>
       <div style="font-size:1.12rem; color: var(--subtext);max-width:530px;margin:17px auto 0;">
-        Reserva tu cupo antes de que termine la oferta <b>y empecemos a crear tu landing y automatización esta semana</b>.
+        Reserva tu cupo antes de que termine la oferta <b>y empecemos a crear tu landing y automatización esta
+          semana</b>.
       </div>
-      <a href="https://wa.me/16574145114?text=Hola!%20Quiero%20reservar%20el%20Paquete%20360°:%20Landing%20%2B%20ManyChat%20para%20Instagram" class="btn" style="font-size:1.16rem;background:var(--primary);color:var(--white);margin-top:27px;" target="_blank">¡Quiero el Paquete 360°!</a>
+      <a href="https://wa.me/16574145114?text=Hola!%20Quiero%20reservar%20el%20Paquete%20360°:%20Landing%20%2B%20ManyChat%20para%20Instagram"
+        class="btn" style="font-size:1.16rem;background:var(--primary);color:var(--white);margin-top:27px;"
+        target="_blank">¡Quiero el Paquete 360°!</a>
       <div class="trust-badges center" style="margin-top:32px;justify-content:center;">
-        <img class="trust-badge-img" src="https://img.icons8.com/fluency/44/thumb-up.png" alt="Satisfacción garantizada">
+        <img class="trust-badge-img" src="https://img.icons8.com/fluency/44/thumb-up.png"
+          alt="Satisfacción garantizada">
         <img class="trust-badge-img" src="https://img.icons8.com/color/44/shield.png" alt="Sitio Seguro">
         <img class="trust-badge-img" src="https://img.icons8.com/color/44/online-support.png" alt="Soporte Total">
       </div>
@@ -593,20 +830,31 @@
   </footer>
   <script>
     // WhatsApp Button
-    document.getElementById('whatsappBtn').onclick = function() {
+    document.getElementById('whatsappBtn').onclick = function () {
+      posthog.capture('whatsapp_button_clicked')
       const msg = encodeURIComponent('Hola! Quiero reservar el Paquete 360°: Landing + ManyChat para Instagram');
       window.open('https://wa.me/16574145114?text=' + msg, '_blank');
     }
     // FAQ toggle
     document.querySelectorAll('.faq-question').forEach(q => {
-      q.addEventListener('click', function() {
+      q.addEventListener('click', function () {
+        posthog.capture('faq_question_clicked')
         const item = q.parentNode;
         item.classList.toggle('open');
         document.querySelectorAll('.faq-item').forEach(other => {
-          if(other!==item) other.classList.remove('open');
+          if (other !== item) other.classList.remove('open');
         });
       });
     });
   </script>
+  <script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog && window.posthog.__loaded) || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init Rr Mr fi Or Ar ci Tr Cr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_kW2Hp9Re5I65bKZkOH6ud7wGwrL2TBqHzWs38lm7ESa', {
+      api_host: 'https://us.i.posthog.com',
+      defaults: '2025-05-24',
+      person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+  </script>
 </body>
+
 </html>
