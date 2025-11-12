@@ -556,6 +556,17 @@
                     <input id="email" name="email" type="email" class="w-full border rounded-lg px-3 py-2 focus-ring"
                         placeholder="tucorreo@ejemplo.com" required>
                 </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1" for="phoneNumber">Teléfono</label>
+                    <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="+1 786 000 0000"
+                        class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500" />
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium mb-1" for="notes">Notas</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Comparte tus redes sociales, empresa, etc."
+                        class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                </div>
                 <div class="flex items-start gap-2 text-xs text-gray-600">
                     <input id="terms" type="checkbox" class="mt-1 border rounded focus-ring" required>
                     <label for="terms">Acepto recibir el recurso por email y comunicaciones relacionadas. Podrás darte
@@ -582,7 +593,7 @@
                     description: "Plantilla ejecutiva en 1 hoja para mapear tu negocio: aliados, actividades y recursos clave; propuesta de valor y punto diferenciador; relación con clientes, canales, flujos de ingreso y estructura de costos. Ideal para visualizar el panorama completo y alinear decisiones.",
                     price: 7.99,
                     target_audience: "Emprendedores y dueños de negocio que necesitan una vista clara y visual de su modelo para ordenar ideas y priorizar.",
-                    filename: "modelo-canvas.pdff"
+                    filename: "modelo-canvas.pdf"
                 },
                 {
                     name: "Guía: El Poder del Mapa de Negocio",
@@ -790,6 +801,8 @@
             resetFormAlert();
             const name = freeForm.name.value.trim();
             const email = freeForm.email.value.trim();
+            const phoneNumber = freeForm.phoneNumber.value.trim();
+            const notes = freeForm.notes.value.trim();
             const fromEvent = freeForm.querySelector('input[name="fromEvent"]').value;
             const productName = freeForm.productName.value;
             const productFilename = sanitizeFilename(freeForm.productFilename.value);
@@ -818,7 +831,9 @@
             const payload = {
                 name, email, fromEvent,
                 productName, productFilename,
-                whatsappNumber
+                whatsappNumber,
+                phoneNumber,
+                notes
             };
             try {
                 const res = await fetch(N8N_ENDPOINT, {
@@ -830,7 +845,7 @@
                 setFormAlert("success", "¡Listo! Te enviamos el recurso por email. La descarga iniciará ahora.");
                 setTimeout(() => {
                     const link = document.createElement("a");
-                    link.href = `/downloads/${productFilename}`;
+                    link.href = `/assets/${productFilename}`;
                     link.download = "";
                     document.body.appendChild(link);
                     link.click();
