@@ -636,7 +636,6 @@
         const sanitizeFilename = (f) => {
             if (!f) return "";
             let name = String(f).trim();
-            if (/\.pdff$/i.test(name)) name = name.replace(/\.pdff$/i, ".pdf");
             if (!/\.pdf$/i.test(name)) name = name + ".pdf";
             return name;
         };
