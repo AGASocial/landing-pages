@@ -846,7 +846,7 @@
                 setFormAlert("success", "¡Listo! Te enviamos el recurso por email. La descarga iniciará ahora.");
                 setTimeout(() => {
                     const link = document.createElement("a");
-                    link.href = `assets/${productFilename}`;
+                    link.href = `/estructura-y-crece-tu-negocio-suite-2/assets/${productFilename}`;
                     link.download = "";
                     document.body.appendChild(link);
                     link.click();
