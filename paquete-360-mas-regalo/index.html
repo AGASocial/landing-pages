@@ -13,6 +13,11 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+    <script>
+        const stripePublishableKey = "pk_live_51IfbN8E9Xixk4cucXlGlBcIsInr36v3GQKLOioben6ZVWhbWG0WDfvSyV5ZM3bo10FIjtKkk4u7uAouigTOxV4Rs00KooaIZne";
+    </script>
     <style>
         :root {
             --red: #be123c;
@@ -625,14 +630,16 @@
                     description: "Landing Page profesional e integración con ManyChat para Instagram. Un paquete redondo y completo para captar clientes automáticamente y escalar tus ventas.",
                     price: 360,
                     target_audience: "Emprendedores y dueños de negocios que quieren aumentar sus ventas en Instagram con automatización y embudos inteligentes.",
-                    filename: "checklist-implementar-ia.pdf"
+                    filename: "checklist-implementar-ia.pdf",
+                    stripeBuyButtonId: "buy_btn_1SStceE9Xixk4cucnzy2wC4J"
                 },
                 {
                     name: "Paquete 360° Pro",
                     description: "Web profesional, Landing Page profesional e integración con ManyChat. Un paquete redondo y completo para captar clientes automáticamente y escalar tus ventas.",
                     price: 1800,
                     target_audience: "Emprendedores y dueños de negocios que quieren aumentar sus ventas en Instagram con automatización y embudos inteligentes.",
-                    filename: "checklist-implementar-ia.pdf"
+                    filename: "checklist-implementar-ia.pdf",
+                    stripeBuyButtonId: "buy_btn_1SStcbE9Xixk4cucPHq93rAE"
                 }
             ]
         }];
@@ -694,22 +701,23 @@
               <p>${p.target_audience || ""}</p>
             </div>
           </div>
-          <div class="mt-5 grid grid-cols-2 gap-3">
+          <div class="mt-5 grid grid-cols-1 gap-3 items-center justify-center w-[288px]">
             ${isFree ? `
               <button data-free="${idx}" class="btn-primary rounded-lg py-2.5 font-semibold shadow-soft focus-ring inline-flex items-center justify-center gap-2 p-4">
                 <span class="material-symbols-rounded">download</span>
                 Descargar gratis
               </button>
-              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2">
+              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2" >
                 <span class="material-symbols-rounded">chat</span>
                 Dudas
               </a>
-            ` : `
-              <button data-buy="${idx}" class="btn-gold rounded-lg py-2.5 font-semibold shadow-soft focus-ring inline-flex items-center justify-center gap-2 p-4">
-                <span class="material-symbols-rounded">shopping_cart</span>
-                Comprar ahora
-              </button>
-              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2 p-4">
+            ` : `            
+       
+              <stripe-buy-button buy-button-id="${p.stripeBuyButtonId}"
+                publishable-key="${stripePublishableKey}">
+                </stripe-buy-button>
+                
+              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2 p-4 ">
                 <span class="material-symbols-rounded">chat</span>
                 Hablar por WhatsApp
               </a>
@@ -915,6 +923,8 @@
             });
         });
     </script>
+
+
 
 </body>
 
