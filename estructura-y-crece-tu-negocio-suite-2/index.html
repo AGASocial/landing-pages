@@ -13,13 +13,21 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+    <script>
+        const stripePublishableKey = "pk_live_51IfbN8E9Xixk4cucXlGlBcIsInr36v3GQKLOioben6ZVWhbWG0WDfvSyV5ZM3bo10FIjtKkk4u7uAouigTOxV4Rs00KooaIZne";
+    </script>
     <style>
         :root {
-            --red: #be123c;
-            --red-strong: #9f1239;
-            --gold: #f59e0b;
-            --gold-soft: #fbbf24;
-            --green: #0d9488;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --accent: #06b6d4;
+            --accent-light: #22d3ee;
+            --purple: #8b5cf6;
+            --purple-light: #a78bfa;
+            --emerald: #10b981;
+            --emerald-light: #34d399;
             --snow: #ffffff;
             --snow-2: #fafafa;
         }
@@ -42,25 +50,25 @@
         }
 
         .gradient-xmas {
-            background: linear-gradient(135deg, #be123c 0%, #e11d48 35%, #f59e0b 100%)
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%)
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #be123c, #e11d48);
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: #fff
         }
 
         .btn-primary:hover {
-            filter: brightness(1.05)
+            filter: brightness(1.1)
         }
 
         .btn-gold {
-            background: linear-gradient(135deg, #f59e0b, #fbbf24);
-            color: #111827
+            background: linear-gradient(135deg, #06b6d4, #22d3ee);
+            color: #fff
         }
 
         .btn-gold:hover {
-            filter: brightness(1.05)
+            filter: brightness(1.1)
         }
 
         .glass {
@@ -69,7 +77,7 @@
         }
 
         .shadow-soft {
-            box-shadow: 0 10px 30px rgba(190, 18, 60, .18)
+            box-shadow: 0 10px 30px rgba(99, 102, 241, .2)
         }
 
         .badge {
@@ -92,7 +100,7 @@
         }
 
         .focus-ring:focus-visible {
-            outline: 3px solid #f59e0b;
+            outline: 3px solid #06b6d4;
             outline-offset: 2px
         }
 
@@ -394,9 +402,9 @@
                     <div class="bg-white border rounded-2xl p-6 reveal">
                         <div class="flex items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop"
-                                alt="Foto de Sofía" class="h-12 w-12 rounded-full object-cover">
+                                alt="Foto de Armando" class="h-12 w-12 rounded-full object-cover">
                             <div>
-                                <p class="font-semibold">Sofía L.</p>
+                                <p class="font-semibold">Armando L.</p>
                                 <p class="text-xs text-gray-500">Emprendedora</p>
                             </div>
                         </div>
@@ -599,26 +607,49 @@
             businessName: "Estructura y Crece tu Negocio",
             whatsappNumber: "+19549909463",
             products: [
+                // {
+                //     name: "Plantilla: Modelo Canvas (Mapa del Negocio)",
+                //     description: "Plantilla ejecutiva en 1 hoja para mapear tu negocio: aliados, actividades y recursos clave; propuesta de valor y punto diferenciador; relación con clientes, canales, flujos de ingreso y estructura de costos. Ideal para visualizar el panorama completo y alinear decisiones.",
+                //     price: 7.99,
+                //     target_audience: "Emprendedores y dueños de negocio que necesitan una vista clara y visual de su modelo para ordenar ideas y priorizar.",
+                //     filename: "modelo-canvas.pdf"
+                // },
                 {
-                    name: "Plantilla: Modelo Canvas (Mapa del Negocio)",
-                    description: "Plantilla ejecutiva en 1 hoja para mapear tu negocio: aliados, actividades y recursos clave; propuesta de valor y punto diferenciador; relación con clientes, canales, flujos de ingreso y estructura de costos. Ideal para visualizar el panorama completo y alinear decisiones.",
-                    price: 7.99,
-                    target_audience: "Emprendedores y dueños de negocio que necesitan una vista clara y visual de su modelo para ordenar ideas y priorizar.",
-                    filename: "modelo-canvas.pdf"
+                    "name": "Ebook: Desbloquea el Crecimiento de tu Negocio",
+                    "description": "Guía estratégica completa para obtener claridad, diagnosticar tu negocio y crear un plan de crecimiento basado en el Mapa Ágil de Negocio. Incluye metodología probada, pasos accionables, preguntas clave y estructura para transformar tu dirección empresarial en resultados medibles.",
+                    "price": 7.99,
+                    "target_audience": "Emprendedores, dueños de negocio y profesionales que necesitan claridad estratégica, estructurar su modelo de negocio y acelerar resultados sin caos.",
+                    "core_benefits": [
+                        "Diagnosticar tu situación actual con claridad total",
+                        "Estructurar tu modelo de negocio en una sola hoja",
+                        "Identificar áreas de mejora, frenos y oportunidades",
+                        "Definir propuesta de valor, cliente ideal y oferta",
+                        "Planificar los próximos 90 días con enfoque estratégico"
+                    ],
+                    "includes": [
+                        "Mapa Ágil del Negocio en 1 hoja",
+                        "Guía paso a paso para diagnóstico, análisis y acción",
+                        "Preguntas estratégicas con beneficios claros",
+                        "Explicación del modelo EGM (Emprendedor Growth Model)",
+                        "Ruta recomendada hacia un crecimiento acelerado"
+                    ],
+                    "filename": "desbloquea-el-crecimiento-de-tu-negocio.pdf",
+                    "stripeBuyButtonId": "buy_btn_1SW1emE9Xixk4cucA1z3ouul"
                 },
                 {
                     name: "Guía: El Poder del Mapa de Negocio",
                     description: "Guía estratégica para diagnosticar, estructurar y acelerar tu negocio con claridad. Explica los pilares (cliente ideal, propuesta de valor, oferta, ingresos, recursos, actividades, socios, costos, relación con el cliente) y cómo convertir el diagnóstico en acciones de 30–90 días.",
-                    price: 7.99,
+                    price: 0,
                     target_audience: "Emprendedores de servicios que sienten dispersión y buscan enfoque práctico para tomar mejores decisiones y crecer con método.",
                     filename: "el-poder-del-mapa-de-negocio.pdf"
                 },
                 {
                     name: "Mini Workbook: Tu Negocio en 1 Hoja (10 minutos)",
                     description: "Cuaderno práctico y accionable para pasar de ‘caos’ a claridad en 10 minutos: completa los bloques clave (cliente ideal, propuesta de valor, producto/servicio, fuentes de ingreso), realiza una autoevaluación, define 3 acciones prioritarias y fija metas a 90 días.",
-                    price: 0,
+                    price: 5.99,
                     target_audience: "Solopreneurs y pequeñas empresas de servicios con poco tiempo que necesitan claridad inmediata y primeros pasos concretos.",
-                    filename: "workbook-del-caos-a-la-claridad.pdf"
+                    filename: "workbook-del-caos-a-la-claridad.pdf",
+                    "stripeBuyButtonId": "buy_btn_1SW1g3E9Xixk4cuc0M55DGc0"
                 }
             ]
         }];
@@ -669,7 +700,7 @@
               <h3 class="text-xl font-semibold">${p.name || "Producto"}</h3>
               <p class="mt-2 text-gray-600">${p.description || ""}</p>
             </div>
-            <span class="badge px-3 py-1 rounded-full text-sm ${isFree ? "bg-emerald-50 text-emerald-700 border-emerald-100" : "bg-rose-50 text-rose-700 border-rose-100"}">
+            <span class="badge px-3 py-1 rounded-full text-sm ${isFree ? "bg-blue-50 text-blue-700 border-blue-100" : "bg-emerald-50 text-emerald-700 border-emerald-100"}">
               ${isFree ? "Gratis" : money(price)}
             </span>
           </div>
@@ -680,22 +711,23 @@
               <p>${p.target_audience || ""}</p>
             </div>
           </div>
-          <div class="mt-5 grid grid-cols-2 gap-3">
+          <div class="mt-5 grid grid-cols-1 gap-3 items-center justify-center w-[288px]">
             ${isFree ? `
               <button data-free="${idx}" class="btn-primary rounded-lg py-2.5 font-semibold shadow-soft focus-ring inline-flex items-center justify-center gap-2 p-4">
                 <span class="material-symbols-rounded">download</span>
                 Descargar gratis
               </button>
-              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2">
+              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2" >
                 <span class="material-symbols-rounded">chat</span>
                 Dudas
               </a>
-            ` : `
-              <button data-buy="${idx}" class="btn-gold rounded-lg py-2.5 font-semibold shadow-soft focus-ring inline-flex items-center justify-center gap-2 p-4">
-                <span class="material-symbols-rounded">shopping_cart</span>
-                Comprar ahora
-              </button>
-              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2 p-4">
+            ` : `            
+       
+              <stripe-buy-button buy-button-id="${p.stripeBuyButtonId}"
+                publishable-key="${stripePublishableKey}">
+                </stripe-buy-button>
+                
+              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2 p-4 ">
                 <span class="material-symbols-rounded">chat</span>
                 Hablar por WhatsApp
               </a>
@@ -714,11 +746,7 @@
         `;
                 productsContainer.appendChild(card);
 
-                const buyBtn = card.querySelector("[data-buy]");
                 const freeBtn = card.querySelector("[data-free]");
-                if (buyBtn) {
-                    buyBtn.addEventListener("click", () => openCheckoutModal(p));
-                }
                 if (freeBtn) {
                     freeBtn.addEventListener("click", () => openFreeFormModal(p));
                 }

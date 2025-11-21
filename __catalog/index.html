@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Landings</title>
+    <style>
+        :root {
+            --primary: #5361F0;
+            --bg: #F8FAFF;
+            --text: #23243A;
+            --muted: #6B7280;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        .wrap {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 28px 20px 40px;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            font-size: 1.6rem;
+        }
+
+        .hint {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 14px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 18px rgba(76, 73, 129, .07);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: .78rem;
+            color: #fff;
+            background: var(--primary);
+            border-radius: 999px;
+            padding: 4px 10px;
+        }
+
+        .empty {
+            color: var(--muted);
+            padding: 24px 0;
+        }
+
+        .search {
+            margin: 10px 0 18px;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 9px;
+            border: 1px solid #dde3ff;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Catálogo de Landings</h1>
+        <div class="hint">Listado dinámico de carpetas en este directorio. Haz clic para abrir.</div>
+        <div class="search"><input id="q" type="search" placeholder="Filtrar por nombre de carpeta…"></div>
+        <div id="grid" class="grid" role="list"></div>
+        <div id="empty" class="empty" style="display:none;">No se encontraron carpetas.</div>
+    </div>
+    <script>
+        async function fetchFolders() {
+            try {
+                // const res = await fetch('/__api/folders');
+                // if (!res.ok) throw new Error('HTTP ' + res.status);
+                // const data = await res.json();
+                return [
+                    'package-360',
+                    'paquete-360-mas-regalo',
+                    'limpieza-garajes',
+                    'estructura-y-crece-tu-negocio-suite-2',
+                    'taller-mapa-agil',
+                    'taller-miedos-en-negocios'];
+            } catch (e) {
+                console.error(e);
+                return [];
+            }
+        }
+
+        function isValidFolder(name) {
+            // Exclude technical folders
+            return !name.startsWith('.') && name !== 'node_modules';
+        }
+
+        function render(folders, filterText) {
+            const grid = document.getElementById('grid');
+            const empty = document.getElementById('empty');
+            grid.innerHTML = '';
+
+            const normalized = (filterText || '').trim().toLowerCase();
+            let count = 0;
+            folders
+                .filter(isValidFolder)
+                .filter(name => normalized ? name.toLowerCase().includes(normalized) : true)
+                .sort()
+                .forEach(name => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    const title = document.createElement('a');
+                    title.href = `/${name}/`;
+                    title.textContent = name;
+                    const badge = document.createElement('span');
+                    badge.className = 'badge';
+                    badge.textContent = 'folder';
+                    card.appendChild(title);
+                    card.appendChild(badge);
+                    grid.appendChild(card);
+                    count++;
+                });
+
+            empty.style.display = count === 0 ? 'block' : 'none';
+        }
+
+        (async () => {
+            const folders = await fetchFolders();
+            render(folders, '');
+            const input = document.getElementById('q');
+            input.addEventListener('input', () => render(folders, input.value));
+        })();
+    </script>
+</body>
+
+</html>

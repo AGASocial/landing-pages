@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Pre-Clase: ManyChat + Instagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .header-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .step-title {
+            color: #5a67d8;
+            font-size: 1.8em;
+            font-weight: 700;
+            flex-grow: 1;
+        }
+
+        .step-icon {
+            font-size: 2em;
+            margin-left: 10px;
+        }
+
+        .step-content {
+            color: #2d3748;
+        }
+
+        .step-content ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .step-content li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.05em;
+        }
+
+        .step-content li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .step-content ul ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .step-content ul ul li:before {
+            content: "•";
+            font-size: 1.5em;
+        }
+
+        .highlight {
+            background: #fef5e7;
+            padding: 15px;
+            border-left: 4px solid #f39c12;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        strong {
+            color: #5a67d8;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .header p {
+                font-size: 1.1em;
+            }
+
+            .step-title {
+                font-size: 1.4em;
+            }
+
+            .step-card {
+                padding: 20px;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            margin-top: 40px;
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-icon">✅</div>
+            <h2>CHECKLIST PRE-CLASE</h2>
+            <p>Configuración Básica para ManyChat + Instagram</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">1</div>
+                <div class="step-title">Acceso y cuentas</div>
+                <div class="step-icon">👤💬</div>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Crear una cuenta en ManyChat (versión gratuita).<br>
+                        👉 <a href="https://manychat.com" target="_blank" class="link">https://manychat.com</a>
+                    </li>
+                    <li>Iniciar sesión en ManyChat y completar la configuración inicial.</li>
+                    <li>Tener una cuenta de Instagram Profesional (Business o Creator).</li>
+                </ul>
+                <div class="highlight">
+                    <strong>⚠️ Importante:</strong> ManyChat NO funciona con Instagram personal.
+                </div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">2</div>
+                <div class="step-title">Conexión ManyChat + Instagram</div>
+                <div class="step-icon">🔐</div>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Asegurarse de estar logueado en Instagram en el navegador donde usarán ManyChat.</li>
+                    <li>Conectar Instagram con ManyChat:<br>
+                        <strong>ManyChat → Settings → Instagram → Connect Instagram Account</strong>
+                    </li>
+                    <li>Verificar que ManyChat muestra el estado como <strong>"Connected"</strong>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">3</div>
+                <div class="step-title">Permisos requeridos</div>
+                <div class="step-icon">📸❤️</div>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Dar permisos completos a ManyChat para:
+                        <ul>
+                            <li>Mensajes directos</li>
+                            <li>Leer comentarios</li>
+                            <li>Gestionar conversaciones</li>
+                        </ul>
+                    </li>
+                    <li>Verificar que Facebook Page correspondiente a la cuenta de IG también está conectada
+                        correctamente (ManyChat requiere FB como puente).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">4</div>
+                <div class="step-title">Publicación del POST que activará el Mini-Chat</div>
+                <div class="step-icon">📱✨</div>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Tener listo un post en Instagram publicado (REEL o POST).</li>
+                </ul>
+                <div class="highlight">
+                    Será el disparador del flujo por comentario.
+                </div>
+                <ul>
+                    <li>El post debe permitir comentarios (no limitado ni restringido).</li>
+                    <li>Tener listo un comentario de prueba que harán durante la clase.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">5</div>
+                <div class="step-title">Limpieza y configuración inicial</div>
+                <div class="step-icon">💻</div>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Revisar que el Instagram NO está saturado de mensajes sin leer (ManyChat puede tardar en
+                        sincronizar).</li>
+                    <li>Tener desactivados temporalmente otros bots/automatizaciones para evitar conflictos.</li>
+                    <li>Verificar que no existen Filtros de palabras prohibidas en ManyChat que bloqueen disparadores.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">6</div>
+                <div class="step-title">Preparación técnica</div>
+                <div class="step-icon">📋</div>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Tener una computadora (no teléfono) para trabajar ManyChat cómodamente.</li>
+                    <li>Navegador actualizado (idealmente Chrome).</li>
+                    <li>Buena conexión a internet.</li>
+                    <li>Tener listo el link final que ManyChat enviará en el último mensaje (ej. página de venta, PDF,
+                        WhatsApp, etc.).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">7</div>
+                <div class="step-title">Material previo</div>
+                <div class="step-icon">📝</div>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Traer un texto breve para el mensaje de bienvenida (ej. "¡Gracias por tu comentario! Te envié un
+                        mensaje directo 😊").</li>
+                    <li>Traer el texto del DM principal que usaremos:
+                        <ul>
+                            <li>Mensaje automático inicial</li>
+                            <li>Botón que dice "RECIBIR ENLACE" o similar</li>
+                            <li>Link final que enviaremos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">8</div>
+                <div class="step-title">Prueba rápida antes de la clase</div>
+                <div class="step-icon">🧪</div>
+            </div>
+            <div class="step-content">
+                <ul>
+                    <li>Hacer un comentario de prueba desde otra cuenta (si tienen).</li>
+                    <li>Ver si ManyChat detecta el comentario en la sección:<br>
+                        <strong>Automation → Instagram → Comments</strong>
+                    </li>
+                </ul>
+                <div class="highlight">
+                    <strong>💡 Consejo:</strong> Esta prueba te ayudará a identificar problemas antes de la clase.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>✨ Una vez completado este checklist, estarás listo para la clase ✨</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">ManyChat + Instagram · Configuración Básica</p>
+        </div>
+    </div>
+</body>
+
+</html>
