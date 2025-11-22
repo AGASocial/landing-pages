@@ -635,14 +635,14 @@
                     name: "Guía: El Poder del Mapa de Negocio",
                     description: "Guía estratégica para diagnosticar, estructurar y acelerar tu negocio con claridad. Explica los pilares (cliente ideal, propuesta de valor, oferta, ingresos, recursos, actividades, socios, costos, relación con el cliente) y cómo convertir el diagnóstico en acciones de 30–90 días.",
                     price: 0,
-                    target_audience: "Emprendedores de servicios que sienten dispersión y buscan enfoque práctico para tomar mejores decisiones y crecer con método.",
+                    target_audience: "Profesionales de servicios abrumados por tareas; necesitan estructura práctica, herramientas y hábitos decisionales para priorizar, ejecutar y escalar su negocio con método probado.",
                     filename: "el-poder-del-mapa-de-negocio.pdf"
                 },
                 {
                     name: "Programa de Acompañamiento de 90 Días",
                     description: "Estructura, Estrategia y Tecnología para Escalar tu Negocio. Programa práctico y personalizado (90 días) que combina metodología estratégica y tecnología para ordenar y escalar tu negocio: define propuesta de valor, atrae prospectos calificados y automatiza sistemas para lograr crecimiento real.",
                     price: 729,
-                    target_audience: "Emprendedores, dueños y profesionales independientes con ideas pero sin estructura que buscan ventas constantes, definir oferta y cliente ideal, simplificar tecnología y avanzar con método y acompañamiento.",
+                    target_audience: "Emprendedores, dueños y profesionales independientes con ideas pero sin estructura que buscan ventas constantes, definir oferta y cliente ideal, simplificar tecnología y avanzar con método.",
                     filename: "acompanamiento-de-90-dias.pdf",
                     stripeBuyButtonId: "buy_btn_1SW7czE9Xixk4cuc34R6bkRY"
                 }, 
@@ -668,7 +668,7 @@
                     description: "Descubre cómo identificar y transformar tus miedos en energía para avanzar y potenciar tu negocio con claridad y confianza.",
                     price: 5.99,
                     target_audience: "Emprendedores, dueños de negocio y profesionales que necesitan acompañamiento para estructurar su modelo de negocio y acelerar resultados sin caos.",
-                    filename: "ebook-miedos-en-negocios.pdf",
+                    filename: "desbloquea-tu-potencial-supera-el-miedo-a-emprender.pdf",
                     stripeBuyButtonId: "buy_btn_1SW7gcE9Xixk4cucZglo3eey"
                 },
             ]
@@ -724,45 +724,47 @@
               ${isFree ? "Gratis" : money(price)}
             </span>
           </div>
-          <div class="mt-4 p-3 bg-gray-50 border rounded-xl text-sm text-gray-700 flex items-start gap-2">
-            <span class="material-symbols-rounded text-emerald-600">groups</span>
-            <div>
-              <p class="font-medium">Ideal para</p>
-              <p>${p.target_audience || ""}</p>
+          <div class="mt-auto">
+            <div class="mt-4 p-3 bg-gray-50 border rounded-xl text-sm text-gray-700 flex items-start gap-2">
+              <span class="material-symbols-rounded text-emerald-600">groups</span>
+              <div>
+                <p class="font-medium">Ideal para</p>
+                <p>${p.target_audience || ""}</p>
+              </div>
             </div>
-          </div>
-          <div class="mt-5 grid grid-cols-1 gap-3 items-center justify-center w-[288px]">
-            ${isFree ? `
-              <button data-free="${idx}" class="btn-primary rounded-lg py-2.5 font-semibold shadow-soft focus-ring inline-flex items-center justify-center gap-2 p-4">
-                <span class="material-symbols-rounded">download</span>
-                Descargar gratis
-              </button>
-              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2" >
-                <span class="material-symbols-rounded">chat</span>
-                Dudas
-              </a>
-            ` : `            
-       
-              <stripe-buy-button buy-button-id="${p.stripeBuyButtonId}"
-                publishable-key="${stripePublishableKey}">
-                </stripe-buy-button>
-                
-              <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2 p-4 ">
-                <span class="material-symbols-rounded">chat</span>
-                Hablar por WhatsApp
-              </a>
+            <div class="mt-5 grid grid-cols-1 gap-3 items-center justify-center w-[288px]">
+              ${isFree ? `
+                <button data-free="${idx}" class="btn-primary rounded-lg py-2.5 font-semibold shadow-soft focus-ring inline-flex items-center justify-center gap-2 p-4">
+                  <span class="material-symbols-rounded">download</span>
+                  Descargar gratis
+                </button>
+                <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2" >
+                  <span class="material-symbols-rounded">chat</span>
+                  Dudas
+                </a>
+              ` : `            
+         
+                <stripe-buy-button buy-button-id="${p.stripeBuyButtonId}"
+                  publishable-key="${stripePublishableKey}">
+                  </stripe-buy-button>
+                  
+                <a href="${waLink + "%20" + p.name}" target="_blank" class="rounded-lg py-2.5 font-semibold bg-white border hover:bg-rose-50 text-rose-700 focus-ring inline-flex items-center justify-center gap-2 p-4 ">
+                  <span class="material-symbols-rounded">chat</span>
+                  Hablar por WhatsApp
+                </a>
+              `}
+            </div>
+            ${!isFree ? `
+              <div class="mt-3 text-xs text-gray-500 flex items-center gap-2">
+                <span class="material-symbols-rounded text-emerald-600">verified</span>
+                Compra sin riesgo: soporte por WhatsApp si lo necesitas.
+              </div>` : `
+              <div class="mt-3 text-xs text-gray-500 flex items-center gap-2">
+                <span class="material-symbols-rounded text-emerald-600">auto_awesome</span>
+                Completa el formulario y empezará la descarga.
+              </div>
             `}
           </div>
-          ${!isFree ? `
-            <div class="mt-3 text-xs text-gray-500 flex items-center gap-2">
-              <span class="material-symbols-rounded text-emerald-600">verified</span>
-              Compra sin riesgo: soporte por WhatsApp si lo necesitas.
-            </div>` : `
-            <div class="mt-3 text-xs text-gray-500 flex items-center gap-2">
-              <span class="material-symbols-rounded text-emerald-600">auto_awesome</span>
-              Completa el formulario y empezará la descarga.
-            </div>
-          `}
         `;
                 productsContainer.appendChild(card);
 
