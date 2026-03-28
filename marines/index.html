@@ -1,1 +1,369 @@
-Marines 50
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="50 Años de una Reina — Sábado 25 de abril, lobby. Información del evento y guía para el permiso de estacionamiento obligatorio (ParkM / Lakehaven).">
+    <title>50 Años de una Reina — Invitación y permiso de estacionamiento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        script: ['"Great Vibes"', 'cursive'],
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        navy: { DEFAULT: '#0a1628', light: '#132a4a' },
+                        gold: { DEFAULT: '#c9a227', light: '#e8d48a', dark: '#8b6914' },
+                        cream: { DEFAULT: '#f7f0e4', dark: '#e8dcc8' },
+                    },
+                    boxShadow: {
+                        gold: '0 4px 24px rgba(201, 162, 39, 0.25)',
+                        card: '0 8px 40px rgba(10, 22, 40, 0.12)',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .texture-bg {
+            background-color: #f7f0e4;
+            background-image:
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #e8d48a 0%, #c9a227 45%, #8b6914 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ornament::before,
+        .ornament::after {
+            content: "✦";
+            color: #c9a227;
+            opacity: 0.7;
+            font-size: 0.75rem;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="texture-bg font-serif text-navy antialiased min-h-screen">
+
+    <a href="#contenido"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-navy focus:text-cream focus:px-4 focus:py-2 focus:rounded-md">Saltar
+        al contenido</a>
+
+    <header class="relative overflow-hidden border-b border-gold/30 bg-navy/95 text-cream">
+        <div class="absolute inset-0 opacity-[0.07]"
+            style="background-image: radial-gradient(circle at 20% 50%, #c9a227 0%, transparent 50%), radial-gradient(circle at 80% 80%, #c9a227 0%, transparent 40%);">
+        </div>
+        <div class="relative max-w-3xl mx-auto px-4 py-10 text-center">
+            <p class="text-gold-light/90 text-sm tracking-[0.35em] uppercase mb-3 font-semibold">Celebración</p>
+            <h1 class="font-script text-5xl sm:text-6xl md:text-7xl gold-gradient-text leading-tight pb-2">
+                50 Años de una Reina
+            </h1>
+            <p class="mt-4 text-cream/85 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
+                Con alegría les compartimos los detalles de la fiesta y cómo obtener el <strong
+                    class="text-gold-light font-semibold">permiso de estacionamiento obligatorio</strong> en la
+                comunidad.
+            </p>
+        </div>
+    </header>
+
+    <main id="contenido" class="max-w-3xl mx-auto px-4 py-10 md:py-14 space-y-12">
+
+        <!-- Invitación visual -->
+        <section class="rounded-2xl overflow-hidden shadow-card border border-gold/25 bg-white/60 backdrop-blur-sm">
+            <img src="assets/invitacion.png"
+                alt="Invitación: 50 Años de una Reina — lobby, fecha, hora, dirección y enlace de permiso de estacionamiento"
+                class="w-full h-auto object-cover" loading="eager" decoding="async">
+        </section>
+
+        <!-- Detalles -->
+        <section
+            class="rounded-2xl bg-white/80 border border-navy/10 shadow-card p-8 md:p-10 text-center space-y-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-navy ornament tracking-wide">Cuándo y dónde</h2>
+            <div class="space-y-2 text-lg md:text-xl text-navy/90">
+                <p class="font-semibold text-gold-dark">Sábado, 25 de abril</p>
+                <p>8:30 PM — 2:00 AM</p>
+            </div>
+            <div class="pt-2">
+                <p class="text-gold-dark font-semibold text-lg mb-1">Nos vemos en el lobby</p>
+                <p class="font-bold text-navy text-xl">732 Bluff St</p>
+                <p class="text-navy/80">Carol Stream, IL 60188</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=732+Bluff+St,+Carol+Stream,+IL+60188"
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 mt-4 text-gold-dark hover:text-navy underline decoration-gold/50 underline-offset-4 font-semibold transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Abrir en Google Maps
+                </a>
+            </div>
+            <button type="button" onclick="addToCalendar()"
+                class="mt-4 inline-flex items-center justify-center gap-2 rounded-full border-2 border-gold bg-navy px-8 py-3 text-cream font-semibold tracking-wide hover:bg-navy-light hover:shadow-gold transition">
+                <span aria-hidden="true">📅</span> Agregar al calendario (.ics)
+            </button>
+        </section>
+
+        <!-- Aviso estacionamiento -->
+        <section id="permiso" class="rounded-2xl bg-navy text-cream p-8 md:p-10 shadow-gold border border-gold/40">
+            <h2 class="text-2xl md:text-3xl font-bold text-gold-light mb-4 text-center ornament">Estacionamiento</h2>
+            <p class="text-center text-cream/90 text-lg leading-relaxed max-w-2xl mx-auto">
+                <strong class="text-white">Se requiere permiso de estacionamiento</strong> para aparcar en la
+                comunidad. Sin permiso válido, el vehículo puede ser remolcado. El proceso se hace en línea a través de
+                <strong class="text-gold-light">ParkM</strong> (sitio oficial del complejo).
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-stretch">
+                <a href="https://parkm.app" target="_blank" rel="noopener noreferrer"
+                    class="flex-1 sm:flex-none text-center rounded-full bg-gold text-navy font-bold py-4 px-8 hover:bg-gold-light transition shadow-lg">
+                    Ir a parkm.app
+                </a>
+                <a href="#guia-paso-a-paso"
+                    class="flex-1 sm:flex-none text-center rounded-full border-2 border-gold-light/80 text-gold-light font-bold py-4 px-8 hover:bg-white/10 transition">
+                    Ver guía paso a paso
+                </a>
+            </div>
+            <p class="text-center text-sm text-cream/60 mt-6">
+                ¿Llegaste desde el código QR de la invitación? Ya estás en el lugar correcto.
+            </p>
+        </section>
+
+        <!-- Manual en español -->
+        <section id="guia-paso-a-paso" class="scroll-mt-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy ornament mb-3">Guía: permiso de visitante</h2>
+                <p class="text-navy/75 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Sigan estos pasos en el teléfono para comprar un <strong>permiso de invitado (Guest)</strong> en
+                    <strong>Lakehaven Apartments</strong>, Carol Stream. El costo aproximado en ParkM suele ser alrededor
+                    de <strong>$6.26</strong> (subtotal más recargo de tarjeta); verifiquen el total en pantalla antes de
+                    pagar.
+                </p>
+            </div>
+
+            <ol class="space-y-14 list-none p-0 m-0">
+
+                <li class="rounded-2xl bg-white/90 border border-navy/10 shadow-card overflow-hidden">
+                    <div class="bg-navy/5 px-6 py-4 border-b border-navy/10">
+                        <span class="text-gold-dark font-bold text-sm uppercase tracking-wider">Paso 1</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mt-1">Entrar a ParkM</h3>
+                        <p class="text-navy/80 mt-2 leading-relaxed">
+                            Abran el navegador del celular y vayan a
+                            <a href="https://parkm.app" target="_blank" rel="noopener noreferrer"
+                                class="text-gold-dark font-semibold underline underline-offset-2">parkm.app</a>.
+                            En la pantalla principal, si ven el mensaje de que no tienen vehículos registrados,
+                            toquen el botón azul grande <strong>«Buy Permit»</strong> (Comprar permiso) para comenzar.
+                        </p>
+                    </div>
+                    <figure class="p-4 md:p-6 bg-cream/50">
+                        <img src="assets/manual-03-comprar-permiso.png"
+                            alt="Pantalla de ParkM con el botón Buy Permit resaltado" class="w-full max-w-sm mx-auto rounded-xl shadow-md border border-navy/10"
+                            loading="lazy" decoding="async">
+                        <figcaption class="text-center text-sm text-navy/60 mt-3">Inicio: comprar permiso.</figcaption>
+                    </figure>
+                </li>
+
+                <li class="rounded-2xl bg-white/90 border border-navy/10 shadow-card overflow-hidden">
+                    <div class="bg-navy/5 px-6 py-4 border-b border-navy/10">
+                        <span class="text-gold-dark font-bold text-sm uppercase tracking-wider">Paso 2</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mt-1">Elegir la comunidad</h3>
+                        <p class="text-navy/80 mt-2 leading-relaxed">
+                            En <strong>Get Started</strong>, seleccionen el estado <strong>Illinois</strong>, escriban
+                            el código postal <strong>60188</strong> y busquen. En resultados, elijan
+                            <strong>Lakehaven Apartments</strong>, Carol Stream, IL (botón de radio). Confirmen con el
+                            botón inferior para continuar (por ejemplo <strong>«Choose community»</strong> cuando esté
+                            activo).
+                        </p>
+                    </div>
+                    <figure class="p-4 md:p-6 bg-cream/50">
+                        <img src="assets/manual-01-comunidad.png"
+                            alt="ParkM: Illinois, código postal 60188 y Lakehaven Apartments en resultados"
+                            class="w-full max-w-sm mx-auto rounded-xl shadow-md border border-navy/10" loading="lazy"
+                            decoding="async">
+                        <figcaption class="text-center text-sm text-navy/60 mt-3">Comunidad correcta: Lakehaven.</figcaption>
+                    </figure>
+                </li>
+
+                <li class="rounded-2xl bg-white/90 border border-navy/10 shadow-card overflow-hidden">
+                    <div class="bg-navy/5 px-6 py-4 border-b border-navy/10">
+                        <span class="text-gold-dark font-bold text-sm uppercase tracking-wider">Paso 3</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mt-1">Tipo de permiso: invitado</h3>
+                        <p class="text-navy/80 mt-2 leading-relaxed">
+                            Verifiquen que diga <strong>Lakehaven Apartments</strong>, Carol Stream, Illinois. Luego
+                            toquen <strong>«Guest Permit»</strong> (Permiso de invitado), no «Resident Permit».
+                        </p>
+                    </div>
+                    <figure class="p-4 md:p-6 bg-cream/50">
+                        <img src="assets/manual-02-tipo-permiso.png"
+                            alt="ParkM: opciones Resident Permit y Guest Permit" class="w-full max-w-sm mx-auto rounded-xl shadow-md border border-navy/10"
+                            loading="lazy" decoding="async">
+                        <figcaption class="text-center text-sm text-navy/60 mt-3">Elegir permiso de invitado.</figcaption>
+                    </figure>
+                </li>
+
+                <li class="rounded-2xl bg-white/90 border border-navy/10 shadow-card overflow-hidden">
+                    <div class="bg-navy/5 px-6 py-4 border-b border-navy/10">
+                        <span class="text-gold-dark font-bold text-sm uppercase tracking-wider">Paso 4</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mt-1">Código de la propiedad (si lo piden)</h3>
+                        <p class="text-navy/80 mt-2 leading-relaxed">
+                            Si aparece un campo de búsqueda o código, ingresen
+                            <strong class="text-navy">712-203</strong> tal como lo indica el administrador del evento y
+                            confirmen. Si su pantalla no pide código, continúen al siguiente paso.
+                        </p>
+                    </div>
+                    <figure class="p-4 md:p-6 bg-cream/50">
+                        <img src="assets/manual-04-codigo.png" alt="Búsqueda con código 712-203 en ParkM"
+                            class="w-full max-w-sm mx-auto rounded-xl shadow-md border border-navy/10" loading="lazy"
+                            decoding="async">
+                        <figcaption class="text-center text-sm text-navy/60 mt-3">Ejemplo de código en búsqueda.</figcaption>
+                    </figure>
+                </li>
+
+                <li class="rounded-2xl bg-white/90 border border-navy/10 shadow-card overflow-hidden">
+                    <div class="bg-navy/5 px-6 py-4 border-b border-navy/10">
+                        <span class="text-gold-dark font-bold text-sm uppercase tracking-wider">Paso 5</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mt-1">Información del vehículo</h3>
+                        <p class="text-navy/80 mt-2 leading-relaxed">
+                            Completen la <strong>placa (License plate)</strong>, el <strong>estado de la placa</strong> y
+                            los demás datos obligatorios. El aviso amarillo es importante: la grúa usa la placa; debe ser
+                            exacta (incluida placa temporal si aplica). Pueden usar <strong>Scan Plate</strong> si lo
+                            prefieren. Luego <strong>«Confirm Vehicle»</strong>.
+                        </p>
+                    </div>
+                    <figure class="p-4 md:p-6 bg-cream/50">
+                        <img src="assets/manual-05-vehiculo.png" alt="Formulario Vehicle Information en ParkM"
+                            class="w-full max-w-sm mx-auto rounded-xl shadow-md border border-navy/10" loading="lazy"
+                            decoding="async">
+                        <figcaption class="text-center text-sm text-navy/60 mt-3">Datos del vehículo.</figcaption>
+                    </figure>
+                </li>
+
+                <li class="rounded-2xl bg-white/90 border border-navy/10 shadow-card overflow-hidden">
+                    <div class="bg-navy/5 px-6 py-4 border-b border-navy/10">
+                        <span class="text-gold-dark font-bold text-sm uppercase tracking-wider">Paso 6</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mt-1">Verificar cuenta</h3>
+                        <p class="text-navy/80 mt-2 leading-relaxed">
+                            Revisen nombre, correo y teléfono. Activen las opciones de <strong>SMS</strong> y
+                            <strong>Términos</strong> si el sistema lo requiere. Toquen
+                            <strong>«Verify Information»</strong> (Verificar información).
+                        </p>
+                    </div>
+                    <figure class="p-4 md:p-6 bg-cream/50">
+                        <img src="assets/manual-06-verificar-cuenta.png" alt="Verify Account Information en ParkM"
+                            class="w-full max-w-sm mx-auto rounded-xl shadow-md border border-navy/10" loading="lazy"
+                            decoding="async">
+                        <figcaption class="text-center text-sm text-navy/60 mt-3">Confirmar datos personales.</figcaption>
+                    </figure>
+                </li>
+
+                <li class="rounded-2xl bg-white/90 border border-navy/10 shadow-card overflow-hidden">
+                    <div class="bg-navy/5 px-6 py-4 border-b border-navy/10">
+                        <span class="text-gold-dark font-bold text-sm uppercase tracking-wider">Paso 7</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mt-1">Pago</h3>
+                        <p class="text-navy/80 mt-2 leading-relaxed">
+                            En la pantalla de compra verán el desglose (subtotal, recargo de tarjeta, total). Toquen
+                            <strong>«+ Add New Payment Method»</strong>, ingresen tarjeta (o Apple Pay / banco si
+                            aplica) y guarden. El total mostrado en el ejemplo fue <strong>$6.26</strong>; el suyo puede
+                            variar ligeramente.
+                        </p>
+                    </div>
+                    <figure class="p-4 md:p-6 bg-cream/50">
+                        <img src="assets/manual-07-pago.png" alt="Modal Add New Payment Method en ParkM"
+                            class="w-full max-w-sm mx-auto rounded-xl shadow-md border border-navy/10" loading="lazy"
+                            decoding="async">
+                        <figcaption class="text-center text-sm text-navy/60 mt-3">Agregar método de pago.</figcaption>
+                    </figure>
+                </li>
+
+                <li class="rounded-2xl bg-white/90 border border-navy/10 shadow-card overflow-hidden">
+                    <div class="bg-navy/5 px-6 py-4 border-b border-navy/10">
+                        <span class="text-gold-dark font-bold text-sm uppercase tracking-wider">Paso 8</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy mt-1">Revisar y pagar</h3>
+                        <p class="text-navy/80 mt-2 leading-relaxed">
+                            Verifiquen que el permiso sea de <strong>invitado</strong>, en <strong>Lakehaven
+                                Apartments</strong>, y que las <strong>fechas de vigencia y vencimiento</strong> cubran
+                            la noche del evento (25 de abril y, si estacionan después de medianoche, lo necesario del
+                            día siguiente). <strong>Park Guard</strong> es opcional. Finalicen con
+                            <strong>«Check Out»</strong> con el monto indicado.
+                        </p>
+                    </div>
+                    <figure class="p-4 md:p-6 bg-cream/50">
+                        <img src="assets/manual-08-compra.png" alt="Pantalla Purchase con Check Out en ParkM"
+                            class="w-full max-w-sm mx-auto rounded-xl shadow-md border border-navy/10" loading="lazy"
+                            decoding="async">
+                        <figcaption class="text-center text-sm text-navy/60 mt-3">Confirmación y pago final.</figcaption>
+                    </figure>
+                </li>
+            </ol>
+
+            <div
+                class="mt-12 rounded-2xl border border-gold/40 bg-navy/5 p-6 md:p-8 text-center space-y-3">
+                <p class="text-navy font-semibold text-lg">¿Necesitan ayuda dentro de ParkM?</p>
+                <p class="text-navy/75">
+                    Usen <strong>Help Buying A Permit</strong> o <strong>Talk To Support</strong> en el menú de la app.
+                    La bandera en la esquina puede cambiar el idioma si está disponible.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gold/30 bg-navy text-cream/70 text-center text-sm py-8 px-4">
+        <p class="font-script text-2xl gold-gradient-text mb-2">50 Años de una Reina</p>
+        <p>Con cariño, los esperamos para celebrar.</p>
+    </footer>
+
+    <script>
+        function addToCalendar() {
+            // 25 abr 2026, 20:30–02:00 hora de Chicago (CDT, UTC−5)
+            const dtStart = '20260426T013000Z';
+            const dtEnd = '20260426T070000Z';
+            const lines = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//50 Años Reina//ES',
+                'CALSCALE:GREGORIAN',
+                'BEGIN:VEVENT',
+                'UID:marines-50-20260425@landing.aga.social',
+                'DTSTAMP:' + formatIcsDate(new Date()),
+                'DTSTART:' + dtStart,
+                'DTEND:' + dtEnd,
+                'SUMMARY:50 Años de una Reina',
+                'DESCRIPTION:Fiesta. Permiso de estacionamiento obligatorio (ParkM - Lakehaven Apartments).\\nhttps://parkm.app',
+                'LOCATION:732 Bluff St (Lobby)\\, Carol Stream\\, IL 60188',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ];
+            const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '50-anos-reina.ics';
+            a.rel = 'noopener';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        function formatIcsDate(d) {
+            const p = (n) => String(n).padStart(2, '0');
+            return d.getUTCFullYear() + p(d.getUTCMonth() + 1) + p(d.getUTCDate()) + 'T' + p(d.getUTCHours()) + p(d.getUTCMinutes()) + p(d.getUTCSeconds()) + 'Z';
+        }
+    </script>
+</body>
+
+</html>
